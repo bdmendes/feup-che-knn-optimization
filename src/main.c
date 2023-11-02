@@ -124,7 +124,7 @@ Point *new_points = NULL;	// The points to be classified
 
 #if VERIFY == 1 // verify if classifications are still the original
 #if READ == 1
-unsigned char key[NUM_TESTING_SAMPLES] = {
+char key[NUM_TESTING_SAMPLES] = {
 #if K == 20
 #include "key-READ1-k20.dat"
 #elif K == 3
@@ -138,9 +138,7 @@ CLASS_ID_TYPE *key = NULL; // The classification key
 
 int main(int argc, char **argv)
 {
-
 	int num_points, num_classes, num_new_points, k;
-
 	const int num_features = NUM_FEATURES;
 
 #if READ == 1 // data embedded in program
@@ -188,15 +186,14 @@ int main(int argc, char **argv)
 	int fail = 0; // count the number of test instances incorrectly classified
 #endif
 
-	// loop over the input instances to classify.
+	// Loop over the input instances to classify.
 	// Note that depending on the application this can be
 	// instances arriving as streaming data.
 	// Here assume that the loop below needs to run in serial mode and the
 	// value of num_new_point is just to test
 	for (int i = 0; i < num_new_points; i++)
 	{
-
-		// get instance to classify
+		// Get instance to classify
 		// in a streaming implementation this might be something like:
 		// Point *new_point = getPoint();
 		Point *new_point = &new_points[i];

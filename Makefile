@@ -25,7 +25,7 @@ PROG = knn_$(MAKECMDGOALS)_$(subst $(space),_,$(COPT)).out
 .PHONY: testing a1a a1b a2 a3 clean gprof
 
 ifndef DT
-$(warning DT is not set. Using default DT=1 (float).)
+$(warning DT is not set. Using default DT=1 (double).)
 DT = 1
 endif
 
