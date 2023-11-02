@@ -1,0 +1,6 @@
+**.out
+**.o
+src/*.dat
+src/params.h
+analysis*.txt
+vscode/
