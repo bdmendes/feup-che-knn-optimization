@@ -50,7 +50,7 @@ ifndef FILE
 	$(error FILE is not set. Please specify the executable to run.)
 endif
 	./$(FILE)
-	gprof $(FILE) gmon.out > analysis.txt
+	gprof $(FILE) gmon.out > $(FILE)-analysis.txt
 	rm gmon.out
 
 clean:
