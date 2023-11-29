@@ -100,6 +100,7 @@
 #include "utils.h"
 #include "io.h"
 #include "knn.h"
+#include "preprocess.h"
 
 #if TIMMING == 1
 #include "timer.h"
@@ -177,6 +178,17 @@ int main(int argc, char **argv)
 
 	printf("Executing kNN...\n");
 
+	/*
+		bdmendes: Data structure transformation.
+		Contiguosly storing the features in memory increases
+		cache locality while accessing the same features.
+	*/
+	DATA_TYPE known_points_features[NUM_FEATURES * NUM_TRAINING_SAMPLES];
+	extract_features(known_points, NUM_TRAINING_SAMPLES, known_points_features);
+
+	CLASS_ID_TYPE known_points_classifications[NUM_TRAINING_SAMPLES];
+	extract_classifications(known_points, NUM_TRAINING_SAMPLES, known_points_classifications);
+
 #if TIMMING == 1
 	Timer *timer = timer_init();
 	timer_start(timer);
@@ -203,8 +215,9 @@ int main(int argc, char **argv)
 		minmax_normalize_point(min, max, new_point, num_features);
 #endif
 
-		CLASS_ID_TYPE instance_class = knn_classifyinstance(*new_point, k, num_classes,
-															known_points, num_points, num_features);
+		CLASS_ID_TYPE instance_class = knn_classifyinstance_soa(*new_point, k, num_classes,
+																known_points_classifications, known_points_features,
+																num_points, num_features);
 
 		// to show the data associated to the point
 		// show_point(*new_points,num_features);

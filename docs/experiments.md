@@ -262,4 +262,39 @@ Point2_classification
 ...
 ```
 
-When calculating distances based on each feature sequentially, the CPU needs to load data from memory each time for each feature, since they are not contiguous on memory. Let's refactor this to increase cache locality.
+When calculating distances based on each feature sequentially, the CPU needs to load data from memory each time for each feature, since they are not contiguous on memory. Let's refactor this to increase cache locality:
+
+```c
+void extract_features(Point *points, int points_len,
+                      DATA_TYPE *out)
+{
+    // out has size = sizeof(points) * NUM_CLASSES
+    for (int i = 0; i < points_len; i++)
+    {
+        Point *point = &points[i];
+        for (int j = 0; j < NUM_FEATURES; j++)
+        {
+            int idx = NUM_FEATURES * j + i;
+        }
+    }
+}
+```
+
+Now the data in memory is as:
+
+```
+Point1_feature1
+Point2_feature1
+Point3_feature1
+Point4_feature1
+...
+```
+
+```
+Point1_classification
+Point2_classification
+Point3_classification
+...
+```
+
+To work with this data we'll create new versions of `knn_classifyinstance` and its callees:
