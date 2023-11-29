@@ -32,15 +32,13 @@ void verify_results(int num_new_points, const Point *new_points, const CLASS_ID_
         CLASS_ID_TYPE classified = new_points[i].classification_id;
         CLASS_ID_TYPE truth = key[i];
 
-        // bdmendes: Printing to the console is slow.
-        // Let us comment these logs.
         if (classified == truth)
         {
-            // printf(" %c %s %c\n", get_class_name(classified), "=", get_class_name(truth));
+            printf(" %c %s %c\n", get_class_name(classified), "=", get_class_name(truth));
         }
         else
         {
-            // printf(" %c %s %c\n", get_class_name(classified), "!=", get_class_name(truth));
+            printf(" %c %s %c\n", get_class_name(classified), "!=", get_class_name(truth));
             passed = 0;
         }
     }

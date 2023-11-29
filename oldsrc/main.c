@@ -223,10 +223,7 @@ int main(int argc, char **argv)
 		new_point->classification_id = instance_class;
 
 		// for now: output the inferred class of the instance
-
-		// bdmendes: Printing to the console is slow.
-		// Let us remove this for statistical improvement.
-		// printf("point %d class id: %d\n", i, instance_class);
+		printf("point %d class id: %d\n", i, instance_class);
 	}
 
 #if TIMMING == 1

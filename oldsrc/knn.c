@@ -83,24 +83,16 @@ void select_k_nearest(BestPoint *dist_points, int num_points, int k)
 void get_k_NN(Point new_point, Point *known_points, int num_points,
               BestPoint *best_points, int k, int num_features)
 {
+
     BestPoint dist_points[num_points];
 
-// calculate the Euclidean distance between the Point to classify and each one in the model
-// and update the k best points if needed
-
-// bdmendes: This is embarrassingly parallel.
-// bdmendes: Speedup: 2
-#pragma omp parallel for
+    // calculate the Euclidean distance between the Point to classify and each one in the model
+    // and update the k best points if needed
     for (int i = 0; i < num_points; i++)
     {
         DATA_TYPE distance = (DATA_TYPE)0.0;
 
         // calculate the Euclidean distance
-
-        // bdmendes: Let us apply a parallel reduction here.
-        // #pragma omp parallel for reduction(+ : distance)
-        // bdmendes: Speedup: 0.043
-        // bdmendes: We are yielding too many threads here.
         for (int j = 0; j < num_features; j++)
         {
             DATA_TYPE diff = (DATA_TYPE)new_point.features[j] - (DATA_TYPE)known_points[i].features[j];
