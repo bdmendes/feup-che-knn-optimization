@@ -21,6 +21,7 @@
 #endif
 
 #include <assert.h>
+#include "stdio.h"
 
 #include "knn.h"
 
@@ -109,6 +110,7 @@ void get_k_NN(Point new_point, Point *known_points, int num_points,
 
         dist_points[i].classification_id = known_points[i].classification_id;
         dist_points[i].distance = distance;
+        printf("dist_points[%d] = %f\n", i, distance);
     }
 
     select_k_nearest(dist_points, num_points, k);
@@ -176,46 +178,4 @@ CLASS_ID_TYPE knn_classifyinstance(Point new_point, int k, int num_classes, Poin
     CLASS_ID_TYPE classID = plurality_voting(k, best_points, num_classes);
 
     return classID;
-}
-
-// New SoA functions
-
-CLASS_ID_TYPE knn_classifyinstance_soa(Point new_point, int k, int num_classes, CLASS_ID_TYPE *known_points_classifications,
-                                       DATA_TYPE *known_points_features, int num_points, int num_features)
-{
-    BestPoint best_points[k];
-
-    get_k_NN_SoA(new_point, known_points_classifications, known_points_features, num_points, best_points, k, num_features);
-
-    CLASS_ID_TYPE classID = plurality_voting(k, best_points, num_classes);
-
-    return classID;
-}
-
-void get_k_NN_SoA(Point new_point, CLASS_ID_TYPE *known_points_classifications, DATA_TYPE *known_points_features,
-                  int num_points, BestPoint *best_points,
-                  int k, int num_features)
-{
-    BestPoint dist_points[num_points];
-
-#pragma omp parallel for
-    for (int i = 0; i < num_points; i++)
-    {
-        dist_points[i].classification_id = known_points_classifications[i];
-        dist_points[i].distance = 0;
-    }
-
-#pragma omp parallel for
-    for (int i = 0; i < num_features; i++)
-    {
-        int base_idx = i * num_points;
-        for (int j = 0; j < num_points; j++)
-        {
-            DATA_TYPE diff = new_point.features[i] - known_points_features[base_idx + j];
-            dist_points[j].distance += diff * diff;
-        }
-    }
-
-    select_k_nearest(dist_points, num_points, k);
-    copy_k_nearest(dist_points, num_points, best_points, k);
 }

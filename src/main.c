@@ -99,6 +99,7 @@
 #include "types.h"
 #include "utils.h"
 #include "io.h"
+#include "knn_soa.h"
 #include "knn.h"
 #include "preprocess.h"
 
@@ -214,6 +215,11 @@ int main(int argc, char **argv)
 		// normalize the point to classify
 		minmax_normalize_point(min, max, new_point, num_features);
 #endif
+
+		// bdmendes: We need to call a new function to fit in the SoA structure.
+		// CLASS_ID_TYPE instance_class = knn_classifyinstance(*new_point, k, num_classes,
+		// 													known_points,
+		// 													num_points, num_features);
 
 		CLASS_ID_TYPE instance_class = knn_classifyinstance_soa(*new_point, k, num_classes,
 																known_points_classifications, known_points_features,
