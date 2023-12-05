@@ -2,6 +2,30 @@
 #include "knn.h"
 #include "stdio.h"
 
+static void get_k_NN_soa(Point new_point, Points points, BestPoint *best_points,
+                         int k)
+{
+    BestPoint dist_points[NUM_TRAINING_SAMPLES];
+
+#pragma omp parallel for
+    for (int i = 0; i < NUM_TRAINING_SAMPLES; i++)
+    {
+        DATA_TYPE sum = 0;
+        int idx = i * NUM_FEATURES; // bdmendes: This is better than calculating i * NUM_FEATURES + j every time
+        for (int j = 0; j < NUM_FEATURES; j++)
+        {
+            DATA_TYPE diff = new_point.features[j] - (DATA_TYPE)points.features[idx];
+            sum += diff * diff;
+            idx++;
+        }
+        dist_points[i].distance = sum;
+        dist_points[i].classification_id = points.classifications[i];
+    }
+
+    select_k_nearest(dist_points, NUM_TRAINING_SAMPLES, k);
+    copy_k_nearest(dist_points, NUM_TRAINING_SAMPLES, best_points, k);
+}
+
 static void get_k_NN_soa_inverted(Point new_point, Points points, BestPoint *best_points,
                                   int k)
 {
@@ -39,10 +63,19 @@ static void get_k_NN_soa_inverted(Point new_point, Points points, BestPoint *bes
 }
 
 CLASS_ID_TYPE knn_classifyinstance_soa_inverted(Point new_point, int k, int num_classes,
-                                                Points points)
+                                                PointsInverted points)
 {
     BestPoint best_points[k];
     get_k_NN_soa_inverted(new_point, points, best_points, k);
+    CLASS_ID_TYPE classID = plurality_voting(k, best_points, num_classes);
+    return classID;
+}
+
+CLASS_ID_TYPE knn_classifyinstance_soa(Point new_point, int k, int num_classes,
+                                       Points points)
+{
+    BestPoint best_points[k];
+    get_k_NN_soa(new_point, points, best_points, k);
     CLASS_ID_TYPE classID = plurality_voting(k, best_points, num_classes);
     return classID;
 }

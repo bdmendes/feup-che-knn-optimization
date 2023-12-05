@@ -186,8 +186,8 @@ int main(int argc, char **argv)
 	*/
 	DATA_TYPE known_points_features[NUM_FEATURES * NUM_TRAINING_SAMPLES];
 	CLASS_ID_TYPE known_points_classifications[NUM_TRAINING_SAMPLES];
-	Points points = extract_soa_inverted(known_points, (DATA_TYPE *)known_points_features,
-										 (CLASS_ID_TYPE *)known_points_classifications);
+	Points points = extract_soa(known_points, (DATA_TYPE *)known_points_features,
+								(CLASS_ID_TYPE *)known_points_classifications);
 
 #if TIMMING == 1
 	Timer *timer = timer_init();
@@ -221,8 +221,8 @@ int main(int argc, char **argv)
 															known_points,
 															num_points, num_features);
 #else
-		CLASS_ID_TYPE instance_class = knn_classifyinstance_soa_inverted(*new_point, k, num_classes,
-																		 points);
+		CLASS_ID_TYPE instance_class = knn_classifyinstance_soa(*new_point, k, num_classes,
+																points);
 #endif
 
 		// to show the data associated to the point
