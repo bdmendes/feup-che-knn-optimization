@@ -24,10 +24,14 @@ void copy_k_nearest(BestPoint *dist_points, int num_points,
 
 void select_k_nearest(BestPoint *dist_points, int num_points, int k);
 
+void copy_k_nearest_specific(BestPoint *dist_points, BestPoint *best_points);
+
+void select_k_nearest_specific(BestPoint *dist_points);
+
 void get_k_NN(Point new_point, Point *known_points, int num_points, BestPoint *best_points,
 			  int k, int num_features);
 
-CLASS_ID_TYPE plurality_voting(int k, BestPoint *best_points, int num_classes);
+CLASS_ID_TYPE plurality_voting(BestPoint *best_points, int num_classes);
 
 CLASS_ID_TYPE knn_classifyinstance(Point new_point, int k, int num_classes, Point *known_points, int num_points, int num_features);
 

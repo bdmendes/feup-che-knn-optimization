@@ -225,6 +225,8 @@ void minmax_normalize(DATA_TYPE *min, DATA_TYPE *max, int num_points, Point *poi
 void minmax_normalize_point(DATA_TYPE *min, DATA_TYPE *max, Point *point, int num_features)
 {
 
+// bdmendes: This is embarransingly parallel.
+#pragma omp parallel for
     for (int j = 0; j < num_features; j++)
     {
 

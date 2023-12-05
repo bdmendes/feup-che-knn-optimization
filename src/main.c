@@ -221,7 +221,7 @@ int main(int argc, char **argv)
 															known_points,
 															num_points, num_features);
 #else
-		CLASS_ID_TYPE instance_class = knn_classifyinstance_soa(*new_point, k, num_classes,
+		CLASS_ID_TYPE instance_class = knn_classifyinstance_soa(*new_point, num_classes,
 																points);
 #endif
 
