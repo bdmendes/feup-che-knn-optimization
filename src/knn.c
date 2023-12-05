@@ -110,7 +110,6 @@ void get_k_NN(Point new_point, Point *known_points, int num_points,
 
         dist_points[i].classification_id = known_points[i].classification_id;
         dist_points[i].distance = distance;
-        printf("dist_points[%d] = %f\n", i, distance);
     }
 
     select_k_nearest(dist_points, num_points, k);

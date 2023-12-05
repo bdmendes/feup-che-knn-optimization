@@ -4,14 +4,25 @@
 
 #include "params.h"
 
-typedef struct {
+typedef struct
+{
     DATA_TYPE features[NUM_FEATURES];
     CLASS_ID_TYPE classification_id;
 } Point;
 
-typedef struct {
+typedef struct
+{
     CLASS_ID_TYPE classification_id;
     DATA_TYPE distance;
 } BestPoint;
 
-#endif //KNN_TYPES_H
+// SoA
+typedef struct
+{
+    DATA_TYPE *features;
+    CLASS_ID_TYPE *classifications;
+} Points;
+
+#define PointsInverted Points
+
+#endif // KNN_TYPES_H

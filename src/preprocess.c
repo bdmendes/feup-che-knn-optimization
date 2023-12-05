@@ -1,37 +1,55 @@
 #include "preprocess.h"
 #include "stdio.h"
+#include "stdbool.h"
 
-void extract_features(Point *points, int points_len,
-                      DATA_TYPE *out)
+static void extract_features(Point *points,
+                             DATA_TYPE *out, bool inverted)
 {
-    // for (int i = 0; i < 4; i++)
-    // {
-    //     Point *point = points + i;
-    //     for (int j = 0; j < NUM_FEATURES; j++)
-    //     {
-    //         printf("point %d feature %d: %f\n", i, j, point->features[j]);
-    //     }
-    // }
-
-    // out has size = sizeof(points) * NUM_CLASSES
-    int curr_idx = 0;
     for (int i = 0; i < NUM_FEATURES; i++)
     {
-        for (int j = 0; j < points_len; j++)
+        for (int j = 0; j < NUM_TRAINING_SAMPLES; j++)
         {
             Point *point = &points[j];
-            out[curr_idx + j] = point->features[i];
+            if (inverted)
+            {
+                out[i * NUM_TRAINING_SAMPLES + j] = point->features[i];
+            }
+            else
+            {
+                out[j * NUM_FEATURES + i] = point->features[i];
+            }
         }
-        curr_idx += points_len;
     }
 }
 
-void extract_classifications(Point *points, int points_len,
-                             CLASS_ID_TYPE *out)
+static void extract_classifications(Point *points,
+                                    CLASS_ID_TYPE *out)
 {
-    for (int i = 0; i < points_len; i++)
+    for (int i = 0; i < NUM_TRAINING_SAMPLES; i++)
     {
         Point *point = &points[i];
         out[i] = point->classification_id;
     }
+}
+
+PointsInverted extract_soa_inverted(Point *points,
+                                    DATA_TYPE *out_features, CLASS_ID_TYPE *out_classifications)
+{
+    PointsInverted points_soa;
+    extract_classifications(points, out_classifications);
+    extract_features(points, out_features, true);
+    points_soa.features = out_features;
+    points_soa.classifications = out_classifications;
+    return points_soa;
+}
+
+Points extract_soa(Point *points,
+                   DATA_TYPE *out_features, CLASS_ID_TYPE *out_classifications)
+{
+    Points points_soa;
+    extract_classifications(points, out_classifications);
+    extract_features(points, out_features, false);
+    points_soa.features = out_features;
+    points_soa.classifications = out_classifications;
+    return points_soa;
 }

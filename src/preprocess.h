@@ -1,8 +1,8 @@
 #include "params.h"
 #include "types.h"
 
-void extract_features(Point *points, int points_len,
-                      DATA_TYPE *out);
+PointsInverted extract_soa_inverted(Point *points,
+                                    DATA_TYPE *out_features, CLASS_ID_TYPE *out_classifications);
 
-void extract_classifications(Point *points, int points_len,
-                             CLASS_ID_TYPE *out);
+Points extract_soa(Point *points,
+                   DATA_TYPE *out_features, CLASS_ID_TYPE *out_classifications);
