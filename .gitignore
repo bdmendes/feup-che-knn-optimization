@@ -4,3 +4,4 @@ src/*.dat
 src/params.h
 analysis*.txt
 vscode/
+*analysis.txt
