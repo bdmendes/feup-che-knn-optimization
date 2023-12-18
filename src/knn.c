@@ -165,6 +165,28 @@ void get_k_NN(Point new_point, Point *known_points,
  */
 CLASS_ID_TYPE plurality_voting(BestPoint *best_points)
 {
+    // bdmendes: specialized implementation for K=3
+    // This makes the execution slower.
+#if 0 && K == 3
+#define MIN(a, b) (((a) < (b)) ? (a) : (b))
+    CLASS_ID_TYPE class_0 = best_points[0].classification_id;
+    CLASS_ID_TYPE class_1 = best_points[1].classification_id;
+    CLASS_ID_TYPE class_2 = best_points[2].classification_id;
+
+    if (class_0 == class_1 || class_0 == class_2)
+    {
+        return class_0;
+    }
+    else if (class_1 == class_2)
+    {
+        return class_1;
+    }
+    else
+    {
+        return MIN(class_0, MIN(class_1, class_2));
+    }
+#endif
+
     CLASS_ID_TYPE histogram[NUM_CLASSES]; // maximum is the value of k
 
     // initialize the histogram

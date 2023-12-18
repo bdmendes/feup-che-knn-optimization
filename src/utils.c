@@ -40,7 +40,7 @@ void verify_results(int num_new_points, const Point *new_points, const CLASS_ID_
         }
         else
         {
-            // printf(" %c %s %c\n", get_class_name(classified), "!=", get_class_name(truth));
+            printf(" %c %s %c\n", get_class_name(classified), "!=", get_class_name(truth));
             passed = 0;
         }
     }
