@@ -216,12 +216,10 @@ int main(int argc, char **argv)
 #endif
 
 // bdmendes: We need to call a new function to fit in the SoA structure.
-#ifdef OG
-		CLASS_ID_TYPE instance_class = knn_classifyinstance(*new_point, k, num_classes,
-															known_points,
-															num_points, num_features);
+#ifdef NSOA
+		CLASS_ID_TYPE instance_class = knn_classifyinstance(*new_point, known_points);
 #else
-		CLASS_ID_TYPE instance_class = knn_classifyinstance_soa(*new_point, num_classes,
+		CLASS_ID_TYPE instance_class = knn_classifyinstance_soa(*new_point,
 																points);
 #endif
 
@@ -276,7 +274,7 @@ int main(int argc, char **argv)
 	timer = timer_destroy(timer);
 #endif
 
-#ifdef OG
+#ifdef NSOA
 	printf("Og kNN: done.\n");
 #else
 	printf("SoA kNN: done.\n");

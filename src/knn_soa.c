@@ -64,20 +64,20 @@ static void get_k_NN_soa_inverted(Point new_point, Points points, BestPoint *bes
     copy_k_nearest_specific(dist_points, best_points);
 }
 
-CLASS_ID_TYPE knn_classifyinstance_soa_inverted(Point new_point, int num_classes,
+CLASS_ID_TYPE knn_classifyinstance_soa_inverted(Point new_point,
                                                 PointsInverted points)
 {
     BestPoint best_points[K];
     get_k_NN_soa_inverted(new_point, points, best_points);
-    CLASS_ID_TYPE classID = plurality_voting(best_points, num_classes);
+    CLASS_ID_TYPE classID = plurality_voting(best_points);
     return classID;
 }
 
-CLASS_ID_TYPE knn_classifyinstance_soa(Point new_point, int num_classes,
+CLASS_ID_TYPE knn_classifyinstance_soa(Point new_point,
                                        Points points)
 {
     BestPoint best_points[K];
     get_k_NN_soa(new_point, points, best_points);
-    CLASS_ID_TYPE classID = plurality_voting(best_points, num_classes);
+    CLASS_ID_TYPE classID = plurality_voting(best_points);
     return classID;
 }
