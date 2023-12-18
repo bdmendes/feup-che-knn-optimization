@@ -32,13 +32,15 @@ void verify_results(int num_new_points, const Point *new_points, const CLASS_ID_
         CLASS_ID_TYPE classified = new_points[i].classification_id;
         CLASS_ID_TYPE truth = key[i];
 
+        // bdmendes: Printing to the console is slow.
+        // Let us comment these logs.
         if (classified == truth)
         {
-            printf(" %c %s %c\n", get_class_name(classified), "=", get_class_name(truth));
+            // printf(" %c %s %c\n", get_class_name(classified), "=", get_class_name(truth));
         }
         else
         {
-            printf(" %c %s %c\n", get_class_name(classified), "!=", get_class_name(truth));
+            // printf(" %c %s %c\n", get_class_name(classified), "!=", get_class_name(truth));
             passed = 0;
         }
     }
@@ -223,6 +225,8 @@ void minmax_normalize(DATA_TYPE *min, DATA_TYPE *max, int num_points, Point *poi
 void minmax_normalize_point(DATA_TYPE *min, DATA_TYPE *max, Point *point, int num_features)
 {
 
+// bdmendes: This is embarransingly parallel.
+#pragma omp parallel for
     for (int j = 0; j < num_features; j++)
     {
 

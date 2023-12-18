@@ -99,7 +99,9 @@
 #include "types.h"
 #include "utils.h"
 #include "io.h"
+#include "knn_soa.h"
 #include "knn.h"
+#include "preprocess.h"
 
 #if TIMMING == 1
 #include "timer.h"
@@ -177,6 +179,16 @@ int main(int argc, char **argv)
 
 	printf("Executing kNN...\n");
 
+	/*
+		bdmendes: Data structure transformation.
+		Contiguosly storing the features in memory increases
+		cache locality while accessing the same features.
+	*/
+	DATA_TYPE known_points_features[NUM_FEATURES * NUM_TRAINING_SAMPLES];
+	CLASS_ID_TYPE known_points_classifications[NUM_TRAINING_SAMPLES];
+	Points points = extract_soa(known_points, (DATA_TYPE *)known_points_features,
+								(CLASS_ID_TYPE *)known_points_classifications);
+
 #if TIMMING == 1
 	Timer *timer = timer_init();
 	timer_start(timer);
@@ -203,8 +215,15 @@ int main(int argc, char **argv)
 		minmax_normalize_point(min, max, new_point, num_features);
 #endif
 
+// bdmendes: We need to call a new function to fit in the SoA structure.
+#ifdef OG
 		CLASS_ID_TYPE instance_class = knn_classifyinstance(*new_point, k, num_classes,
-															known_points, num_points, num_features);
+															known_points,
+															num_points, num_features);
+#else
+		CLASS_ID_TYPE instance_class = knn_classifyinstance_soa(*new_point, num_classes,
+																points);
+#endif
 
 		// to show the data associated to the point
 		// show_point(*new_points,num_features);
@@ -214,16 +233,7 @@ int main(int argc, char **argv)
 			fail++;
 #endif
 
-		// The following store the inferred class in the point structure
-		// In practice and especially in streaming operation, this
-		// may not be done and the class is output to the subsequent
-		// stages of the application
-		// For now this is used to verify the results by comparing
-		// the class obtained for each point to a golden class
 		new_point->classification_id = instance_class;
-
-		// for now: output the inferred class of the instance
-		printf("point %d class id: %d\n", i, instance_class);
 	}
 
 #if TIMMING == 1
@@ -264,6 +274,12 @@ int main(int argc, char **argv)
 	printf("Score: %d\n", get_reference_score(time, num_points));
 #endif
 	timer = timer_destroy(timer);
+#endif
+
+#ifdef OG
+	printf("Og kNN: done.\n");
+#else
+	printf("SoA kNN: done.\n");
 #endif
 
 #if READ != 1

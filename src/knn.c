@@ -21,8 +21,42 @@
 #endif
 
 #include <assert.h>
+#include "stdio.h"
 
 #include "knn.h"
+
+#include <string.h>
+
+void copy_k_nearest_specific(BestPoint *dist_points, BestPoint *best_points)
+{
+    memcpy(best_points, dist_points, K * sizeof(BestPoint));
+}
+
+void select_k_nearest_specific(BestPoint *dist_points)
+{
+    DATA_TYPE min_distance;
+    int index;
+
+    for (int i = 0; i < K; i++)
+    { // we only need the top k minimum distances
+        min_distance = dist_points[i].distance;
+        index = i;
+        for (int j = i + 1; j < NUM_TRAINING_SAMPLES; j++)
+        {
+            if (dist_points[j].distance < min_distance)
+            {
+                min_distance = dist_points[j].distance;
+                index = j;
+            }
+        }
+        if (index != i)
+        { // swap
+            BestPoint tmp = dist_points[index];
+            dist_points[index] = dist_points[i];
+            dist_points[i] = tmp;
+        }
+    }
+}
 
 /**
  *  Copy the top k nearest points (first k elements of dist_points)
@@ -31,12 +65,14 @@
 void copy_k_nearest(BestPoint *dist_points, int num_points,
                     BestPoint *best_points, int k)
 {
+    // bdmendes: We can do this with a memcpy.
+    // for (int i = 0; i < k; i++)
+    // { // we only need the top k minimum distances
+    //     best_points[i].classification_id = dist_points[i].classification_id;
+    //     best_points[i].distance = dist_points[i].distance;
+    // }
 
-    for (int i = 0; i < k; i++)
-    { // we only need the top k minimum distances
-        best_points[i].classification_id = dist_points[i].classification_id;
-        best_points[i].distance = dist_points[i].distance;
-    }
+    memcpy(best_points, dist_points, k * sizeof(BestPoint));
 }
 
 /**
@@ -45,9 +81,7 @@ void copy_k_nearest(BestPoint *dist_points, int num_points,
  */
 void select_k_nearest(BestPoint *dist_points, int num_points, int k)
 {
-
-    DATA_TYPE min_distance, distance_i;
-    CLASS_ID_TYPE class_id_1;
+    DATA_TYPE min_distance;
     int index;
 
     for (int i = 0; i < k; i++)
@@ -64,14 +98,19 @@ void select_k_nearest(BestPoint *dist_points, int num_points, int k)
         }
         if (index != i)
         { // swap
-            distance_i = dist_points[index].distance;
-            class_id_1 = dist_points[index].classification_id;
+            // bdmedes: We can do this in a cleaner way.
+            // distance_i = dist_points[index].distance;
+            // class_id_1 = dist_points[index].classification_id;
 
-            dist_points[index].distance = dist_points[i].distance;
-            dist_points[index].classification_id = dist_points[i].classification_id;
+            // dist_points[index].distance = dist_points[i].distance;
+            // dist_points[index].classification_id = dist_points[i].classification_id;
 
-            dist_points[i].distance = distance_i;
-            dist_points[i].classification_id = class_id_1;
+            // dist_points[i].distance = distance_i;
+            // dist_points[i].classification_id = class_id_1;
+
+            BestPoint tmp = dist_points[index];
+            dist_points[index] = dist_points[i];
+            dist_points[i] = tmp;
         }
     }
 }
@@ -83,16 +122,24 @@ void select_k_nearest(BestPoint *dist_points, int num_points, int k)
 void get_k_NN(Point new_point, Point *known_points, int num_points,
               BestPoint *best_points, int k, int num_features)
 {
-
     BestPoint dist_points[num_points];
 
-    // calculate the Euclidean distance between the Point to classify and each one in the model
-    // and update the k best points if needed
+// calculate the Euclidean distance between the Point to classify and each one in the model
+// and update the k best points if needed
+
+// bdmendes: This is embarrassingly parallel.
+// bdmendes: Speedup: 2
+#pragma omp parallel for
     for (int i = 0; i < num_points; i++)
     {
         DATA_TYPE distance = (DATA_TYPE)0.0;
 
         // calculate the Euclidean distance
+
+        // bdmendes: Let us apply a parallel reduction here.
+        // #pragma omp parallel for reduction(+ : distance)
+        // bdmendes: Speedup: 0.043
+        // bdmendes: We are yielding too many threads here.
         for (int j = 0; j < num_features; j++)
         {
             DATA_TYPE diff = (DATA_TYPE)new_point.features[j] - (DATA_TYPE)known_points[i].features[j];
@@ -116,9 +163,8 @@ void get_k_NN(Point new_point, Point *known_points, int num_points,
  *	Note: it assumes that classes are identified from 0 to
  *	num_classes - 1.
  */
-CLASS_ID_TYPE plurality_voting(int k, BestPoint *best_points, int num_classes)
+CLASS_ID_TYPE plurality_voting(BestPoint *best_points, int num_classes)
 {
-
     CLASS_ID_TYPE histogram[num_classes]; // maximum is the value of k
 
     // initialize the histogram
@@ -128,14 +174,16 @@ CLASS_ID_TYPE plurality_voting(int k, BestPoint *best_points, int num_classes)
     }
 
     // build the histogram
-    for (int i = 0; i < k; i++)
+    // bdmendes: Use specific k.
+    for (int i = 0; i < K; i++)
     {
         BestPoint p = best_points[i];
         // if (best_points[i].distance < min_distance) {
         //     min_distance = best_points[i].distance;
         // }
 
-        assert(p.classification_id != -1);
+        // bdmendes: Comment out debug code.
+        // assert(p.classification_id != -1);
 
         histogram[(int)p.classification_id] += 1;
     }
@@ -167,7 +215,7 @@ CLASS_ID_TYPE knn_classifyinstance(Point new_point, int k, int num_classes, Poin
     get_k_NN(new_point, known_points, num_points, best_points, k, num_features);
 
     // use plurality voting to return the class inferred for the new point
-    CLASS_ID_TYPE classID = plurality_voting(k, best_points, num_classes);
+    CLASS_ID_TYPE classID = plurality_voting(best_points, num_classes);
 
     return classID;
 }
