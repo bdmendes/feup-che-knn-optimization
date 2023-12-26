@@ -65,14 +65,12 @@ void select_k_nearest_specific(BestPoint *dist_points)
 void copy_k_nearest(BestPoint *dist_points,
                     BestPoint *best_points)
 {
-    // bdmendes: We can do this with a memcpy.
-    // for (int i = 0; i < k; i++)
-    // { // we only need the top k minimum distances
-    //     best_points[i].classification_id = dist_points[i].classification_id;
-    //     best_points[i].distance = dist_points[i].distance;
-    // }
-
-    memcpy(best_points, dist_points, K * sizeof(BestPoint));
+    // bdmendes: We can do this with a memcpy. See copy_k_nearest_specific.
+    for (int i = 0; i < K; i++)
+    { // we only need the top k minimum distances
+        best_points[i].classification_id = dist_points[i].classification_id;
+        best_points[i].distance = dist_points[i].distance;
+    }
 }
 
 /**
@@ -153,7 +151,11 @@ void get_k_NN(Point new_point, Point *known_points,
 
     select_k_nearest(dist_points);
 
+#ifdef ASSIGNMENT_LOOP
     copy_k_nearest(dist_points, best_points);
+#else
+    copy_k_nearest_specific(dist_points, best_points);
+#endif
 }
 
 /*
@@ -167,7 +169,8 @@ CLASS_ID_TYPE plurality_voting(BestPoint *best_points)
 {
     // bdmendes: specialized implementation for K=3
     // This makes the execution slower.
-#if 0 && K == 3
+#ifdef SPECIFIC_VOTING
+#if K == 3
 #define MIN(a, b) (((a) < (b)) ? (a) : (b))
     CLASS_ID_TYPE class_0 = best_points[0].classification_id;
     CLASS_ID_TYPE class_1 = best_points[1].classification_id;
@@ -186,18 +189,20 @@ CLASS_ID_TYPE plurality_voting(BestPoint *best_points)
         return MIN(class_0, MIN(class_1, class_2));
     }
 #endif
+#endif
 
     CLASS_ID_TYPE histogram[NUM_CLASSES]; // maximum is the value of k
 
     // initialize the histogram
-
+#ifdef ASSIGNMENT_LOOP
     // bdmendes: We can do this with a memset.
-    // for (int i = 0; i < num_classes; i++)
-    // {
-    //     histogram[i] = 0;
-    // }
-
+    for (int i = 0; i < NUM_CLASSES; i++)
+    {
+        histogram[i] = 0;
+    }
+#else
     memset(histogram, 0, NUM_CLASSES * sizeof(CLASS_ID_TYPE));
+#endif
 
     // build the histogram
     // bdmendes: Use specific k.

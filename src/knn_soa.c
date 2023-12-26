@@ -23,10 +23,14 @@ static void get_k_NN_soa(Point new_point, Points points, BestPoint *best_points)
 
     // bdmendes: Let us use the specialized functions instead of the generic ones.
     // select_k_nearest(dist_points, NUM_TRAINING_SAMPLES, k);
-    // copy_k_nearest(dist_points, NUM_TRAINING_SAMPLES, best_points, k);
 
     select_k_nearest_specific(dist_points);
+
+#ifdef ASSIGNMENT_LOOP
+    copy_k_nearest(dist_points, best_points);
+#else
     copy_k_nearest_specific(dist_points, best_points);
+#endif
 }
 
 static void get_k_NN_soa_inverted(Point new_point, Points points, BestPoint *best_points)
@@ -61,7 +65,12 @@ static void get_k_NN_soa_inverted(Point new_point, Points points, BestPoint *bes
     }
 
     select_k_nearest_specific(dist_points);
+
+#ifdef ASSIGNMENT_LOOP
+    copy_k_nearest(dist_points, best_points);
+#else
     copy_k_nearest_specific(dist_points, best_points);
+#endif
 }
 
 CLASS_ID_TYPE knn_classifyinstance_soa_inverted(Point new_point,

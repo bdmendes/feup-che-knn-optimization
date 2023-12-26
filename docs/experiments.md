@@ -271,6 +271,8 @@ Since we work with features and classifications independently, we can create con
 ```
 
 This (and respective modifications in functions) does improve the execution time very slightly, by about 5%.
+We integrated these changes and used this improvement going forward.
+
 
 > Note: we also tried to invert the features matrix (so that each line was a feature and each column a point), but this worsened the performance by about 50%. This is due to the fact that although calculating feature differences for all points is convenient, calculating the total distance for each point is not, since we have to iterate over all features for each point and skip all the other features already loaded in the cache. Anyway, we kept the code of this experiment under functions suffixed with `_inverted`.
 
@@ -311,3 +313,10 @@ Time: 0.1259 s
 ```
 
 `plurality_voting` is probably getting inlined and transparent to `gprof`. In any case, due to CPU pipelining stalls, the specialized implementation is actually worse than the SIMD, original implementation, so we'll keep the original one.
+
+| Flag | Description |
+| --- | --- |
+| SPECIFIC_VOTING | Use a specific implementation of plurality voting. (Implemented for K=3) |
+| NSOA | Use array of structures instead of structure of arrays. |
+| INVERTED (Requires NSOA to not be defined) | Use inverted features matrix, so that each line was a feature and each column a point. |
+| ASSIGNMENT_LOOP | Use assignment loops to initialize/copy arrays instead of memset/memcpy. |
