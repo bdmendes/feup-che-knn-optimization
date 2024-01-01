@@ -321,4 +321,4 @@ Time: 0.1259 s
 | INVERTED (Requires NSOA to not be defined) | Use inverted features matrix, so that each line was a feature and each column a point. |
 | ASSIGNMENT_LOOP | Use assignment loops to initialize/copy arrays instead of memset/memcpy. |
 | MERGE_SINGLE | Use a single core for the calculating the distance of each point and the select the K nearest. |
-
+| UNKNOWN_PARAMETERS | Use variables instead of the static values | 
