@@ -12,7 +12,7 @@ ifndef COPT
 $(warning COPT is not set. Using default COPT=-O0.)
 COPT = -O0
 endif
-CXX = gcc
+CXX = gcc #/opt/intel/oneapi/compiler/latest/bin/icx
 CGFLAGS = -Wall -std=gnu99 -lm -fopenmp -pg -fno-builtin -Wno-unused-parameter
 CFLAGS = $(CGFLAGS) $(COPT)
 
