@@ -320,3 +320,4 @@ Time: 0.1259 s
 | NSOA | Use array of structures instead of structure of arrays. |
 | INVERTED (Requires NSOA to not be defined) | Use inverted features matrix, so that each line was a feature and each column a point. |
 | ASSIGNMENT_LOOP | Use assignment loops to initialize/copy arrays instead of memset/memcpy. |
+| UNKNOWN_PARAMETERS | Use variables instead of the static values | 
