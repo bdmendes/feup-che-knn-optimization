@@ -6,20 +6,21 @@
 #include "params.h"
 #include "stdio.h"
 
+
 static void get_k_NN_soa_merge(Point new_point, Points points,
                                BestPoint *best_points, int k, int num_classes,
                                int num_features, int num_points) {
-#ifdef MERGE_SINGLE
+#if !defined (PARALLELIZATION) || defined (MERGE_SINGLE)
     BestPoint closestPoints[k];
 #else
     BestPoint closestPoints[k * omp_get_max_threads()];
 #endif
 
-#ifndef MERGE_SINGLE
+#if defined (PARALLELIZATION) && !defined (MERGE_SINGLE)
 #pragma omp parallel
 #endif
     {
-#ifndef MERGE_SINGLE
+#if defined (PARALLELIZATION) && !defined (MERGE_SINGLE)
         int threadNum = omp_get_thread_num();
         BestPoint *localClosest = &closestPoints[k * threadNum];
 #else
@@ -29,7 +30,7 @@ static void get_k_NN_soa_merge(Point new_point, Points points,
         for (int i = 0; i < k; i++) {
             localClosest[i].distance = DBL_MAX;
         }
-#ifndef MERGE_SINGLE
+#if defined (PARALLELIZATION) && !defined (MERGE_SINGLE)
 #pragma omp for
 #endif
         for (int i = 0; i < num_points; i++) {
@@ -68,7 +69,7 @@ static void get_k_NN_soa_merge(Point new_point, Points points,
         best_points[i].distance = DBL_MAX;
     }
 
-#ifndef MERGE_SINGLE
+#if defined (PARALLELIZATION) && !defined (MERGE_SINGLE)
     for (int i = 0; i < k * omp_get_max_threads(); i++)
 #else
     for (int i = 0; i < k; i++)
@@ -88,17 +89,17 @@ static void get_k_NN_soa_merge(Point new_point, Points points,
 
 static void get_k_NN_soa_merge_static(Point new_point, Points points,
                                       BestPoint *best_points) {
-#ifdef MERGE_SINGLE
+#if !defined (PARALLELIZATION) || defined (MERGE_SINGLE) 
     BestPoint closestPoints[K];
 #else
     BestPoint closestPoints[K * omp_get_max_threads()];
 #endif
 
-#ifndef MERGE_SINGLE
+#if defined (PARALLELIZATION) && !defined (MERGE_SINGLE)
 #pragma omp parallel
 #endif
     {
-#ifndef MERGE_SINGLE
+#if defined (PARALLELIZATION) && !defined (MERGE_SINGLE)
         int threadNum = omp_get_thread_num();
         BestPoint *localClosest = &closestPoints[K * threadNum];
 #else
@@ -108,7 +109,7 @@ static void get_k_NN_soa_merge_static(Point new_point, Points points,
         for (int i = 0; i < K; i++) {
             localClosest[i].distance = DBL_MAX;
         }
-#ifndef MERGE_SINGLE
+#if defined (PARALLELIZATION) && !defined (MERGE_SINGLE)
 #pragma omp for
 #endif
         for (int i = 0; i < NUM_TRAINING_SAMPLES; i++) {
@@ -147,7 +148,7 @@ static void get_k_NN_soa_merge_static(Point new_point, Points points,
         best_points[i].distance = DBL_MAX;
     }
 
-#ifndef MERGE_SINGLE
+#if defined (PARALLELIZATION) && !defined (MERGE_SINGLE)
     for (int i = 0; i < K * omp_get_max_threads(); i++)
 #else
     for (int i = 0; i < K; i++)
@@ -169,7 +170,9 @@ static void get_k_NN_soa(Point new_point, Points points, BestPoint *best_points,
                          int k, int num_features, int num_points) {
     BestPoint dist_points[num_points];
 
+#ifdef PARALLELIZATION
 #pragma omp parallel for
+#endif
     for (int i = 0; i < num_points; i++) {
         DATA_TYPE sum = 0;
         int idx = i * num_features; // bdmendes: This is better than calculating
@@ -189,7 +192,7 @@ static void get_k_NN_soa(Point new_point, Points points, BestPoint *best_points,
 
     select_k_nearest_specific(dist_points, k, num_points);
 
-#ifdef ASSIGNMENT_LOOP
+#ifndef MEMSET
     copy_k_nearest(dist_points, best_points, k);
 #else
     copy_k_nearest_specific(dist_points, best_points, k);
@@ -200,7 +203,9 @@ static void get_k_NN_soa_static(Point new_point, Points points,
                                 BestPoint *best_points) {
     BestPoint dist_points[NUM_TRAINING_SAMPLES];
 
+#ifdef PARALLELIZATION
 #pragma omp parallel for
+#endif
     for (int i = 0; i < NUM_TRAINING_SAMPLES; i++) {
         DATA_TYPE sum = 0;
         int idx = i * NUM_FEATURES; // bdmendes: This is better than calculating
@@ -220,7 +225,7 @@ static void get_k_NN_soa_static(Point new_point, Points points,
 
     select_k_nearest_specific_static(dist_points);
 
-#ifdef ASSIGNMENT_LOOP
+#ifndef MEMSET
     copy_k_nearest_static(dist_points, best_points);
 #else
     copy_k_nearest_specific_static(dist_points, best_points);
@@ -233,7 +238,9 @@ static void get_k_NN_soa_inverted(Point new_point, Points points,
     // Generate difference feature by feature, point by point
     DATA_TYPE feature_diffs[num_features][num_points];
 
+#ifdef PARALLELIZATION
 #pragma omp parallel for
+#endif
     for (int i = 0; i < num_features; i++) {
         DATA_TYPE new_point_feature = (DATA_TYPE)new_point.features[i];
         for (int j = 0; j < num_points; j++) {
@@ -246,7 +253,9 @@ static void get_k_NN_soa_inverted(Point new_point, Points points,
     // Generate difference point by point
     BestPoint dist_points[num_points];
 
+#ifdef PARALLELIZATION
 #pragma omp parallel for
+#endif
     for (int i = 0; i < num_points; i++) {
         DATA_TYPE sum = 0;
         for (int j = 0; j < num_features; j++) {
@@ -258,7 +267,7 @@ static void get_k_NN_soa_inverted(Point new_point, Points points,
 
     select_k_nearest_specific(dist_points, k, num_points);
 
-#ifdef ASSIGNMENT_LOOP
+#ifndef MEMSET
     copy_k_nearest(dist_points, best_points, k);
 #else
     copy_k_nearest_specific(dist_points, best_points, k);
@@ -270,7 +279,9 @@ static void get_k_NN_soa_inverted_static(Point new_point, Points points,
     // Generate difference feature by feature, point by point
     DATA_TYPE feature_diffs[NUM_FEATURES][NUM_TRAINING_SAMPLES];
 
+#ifdef PARALLELIZATION
 #pragma omp parallel for
+#endif
     for (int i = 0; i < NUM_FEATURES; i++) {
         DATA_TYPE new_point_feature = (DATA_TYPE)new_point.features[i];
         for (int j = 0; j < NUM_TRAINING_SAMPLES; j++) {
@@ -284,7 +295,9 @@ static void get_k_NN_soa_inverted_static(Point new_point, Points points,
     // Generate difference point by point
     BestPoint dist_points[NUM_TRAINING_SAMPLES];
 
+#ifdef PARALLELIZATION
 #pragma omp parallel for
+#endif
     for (int i = 0; i < NUM_TRAINING_SAMPLES; i++) {
         DATA_TYPE sum = 0;
         for (int j = 0; j < NUM_FEATURES; j++) {
@@ -296,7 +309,7 @@ static void get_k_NN_soa_inverted_static(Point new_point, Points points,
 
     select_k_nearest_specific_static(dist_points);
 
-#ifdef ASSIGNMENT_LOOP
+#ifndef MEMSET
     copy_k_nearest_static(dist_points, best_points);
 #else
     copy_k_nearest_specific_static(dist_points, best_points);

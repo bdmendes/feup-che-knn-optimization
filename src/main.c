@@ -146,21 +146,31 @@ int main(int argc, char **argv) {
     const int num_features = NUM_FEATURES;
 
 #if READ == 1 // data embedded in program
+#ifndef METRICS
     printf("Data points initialized with WISDM dataset...\n");
+#endif
     k = K;
     num_classes = NUM_CLASSES;
     num_points = NUM_TRAINING_SAMPLES;
     num_new_points = NUM_TESTING_SAMPLES;
 #elif READ == 2 // data read from .dat file
+#ifndef METRICS
     printf("Initializing data points from .dat ...\n");
+#endif
     read_data(argc, argv, &num_points, &num_classes, &num_new_points, &k,
               &known_points, &new_points, &key, num_features);
+#ifndef METRICS
     printf("Initialization done.\n\n");
+#endif
 #elif READ == 3 // data randomly initialized
+#ifndef METRICS
     printf("Initializing data points with random data ...\n");
+#endif
     generate_random_data(argc, argv, &num_points, &num_classes, &num_new_points,
                          &k, &known_points, &new_points, &key, num_features);
+#ifndef METRICS
     printf("Initialization done.\n\n");
+#endif
 #endif
 
 #if NORMALIZE == 1 // minmax normalization
@@ -179,7 +189,9 @@ int main(int argc, char **argv) {
 #endif
 #endif
 
+#ifndef METRICS
     printf("Executing kNN...\n");
+#endif
 
     /*
             bdmendes: Data structure transformation.
@@ -224,16 +236,15 @@ int main(int argc, char **argv) {
 #endif
 
 // bdmendes: We need to call a new function to fit in the SoA structure.
-#ifndef UNKNOWN_PARAMETERS
-#ifdef NSOA
+#ifndef VARIABLE_PARAMETERS
+#ifndef SOA
         CLASS_ID_TYPE instance_class =
             knn_classifyinstance_static(*new_point, known_points);
 #else
 #ifdef INVERTED
         CLASS_ID_TYPE instance_class =
             knn_classifyinstance_soa_inverted_static(*new_point, points);
-#else
-#ifdef MERGE_DISTANCE_SELECT
+#elif MERGE_DISTANCE_SELECT
         CLASS_ID_TYPE instance_class =
             knn_classifyinstance_soa_merge_static(*new_point, points);
 #else
@@ -241,23 +252,20 @@ int main(int argc, char **argv) {
             knn_classifyinstance_soa_static(*new_point, points);
 #endif
 #endif
-#endif
 #else
-#ifdef NSOA
+#ifndef SOA
         CLASS_ID_TYPE instance_class = knn_classifyinstance(
             *new_point, known_points, k, num_classes, num_features, num_points);
 #else
 #ifdef INVERTED
         CLASS_ID_TYPE instance_class = knn_classifyinstance_soa_inverted(
             *new_point, points, k, num_classes, num_features, num_points);
-#else
-#ifdef MERGE_DISTANCE_SELECT
+#elif MERGE_DISTANCE_SELECT
         CLASS_ID_TYPE instance_class = knn_classifyinstance_soa_merge(
             *new_point, points, k, num_classes, num_features, num_points);
 #else
         CLASS_ID_TYPE instance_class = knn_classifyinstance_soa(
             *new_point, points, k, num_classes, num_features, num_points);
-#endif
 #endif
 #endif
 #endif
@@ -277,6 +285,7 @@ int main(int argc, char **argv) {
     timer_stop(timer);
 #endif
 
+#ifndef METRICS
     printf("kNN done.\n\n");
 
     printf("kNN: number of classes = %d\n", num_classes);
@@ -305,20 +314,27 @@ int main(int argc, char **argv) {
 #else
     printf("kNN: no verification of results.\n");
 #endif
+#endif
 
 #if TIMMING == 1
     const double time = timer_get_s(timer);
+#ifdef METRICS
+    printf("%.4f\n", time);
+#else
     printf("\nTime:  %.4f s\n", time);
+#endif
 #if READ == 2
     printf("Score: %d\n", get_reference_score(time, num_points));
 #endif
     timer = timer_destroy(timer);
 #endif
 
+#ifndef METRICS
 #ifdef NSOA
     printf("Og kNN: done.\n");
 #else
     printf("SoA kNN: done.\n");
+#endif
 #endif
 
 #if READ != 1

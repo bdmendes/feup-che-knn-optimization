@@ -317,8 +317,11 @@ Time: 0.1259 s
 | Flag | Description |
 | --- | --- |
 | SPECIFIC_VOTING | Use a specific implementation of plurality voting. (Implemented for K=3) |
-| NSOA | Use array of structures instead of structure of arrays. |
-| INVERTED (Requires NSOA to not be defined) | Use inverted features matrix, so that each line was a feature and each column a point. |
-| ASSIGNMENT_LOOP | Use assignment loops to initialize/copy arrays instead of memset/memcpy. |
+| SOA | Use structure of arrays instead of array of structures. |
+| INVERTED (Requires SSOA to be defined) | Use inverted features matrix, so that each line was a feature and each column a point. |
+| MEMSET | Use assignment loops to initialize/copy arrays instead of memset/memcpy. |
+| MERGE_DISTANCE_SELECT | Merge the distance calculation and the selection of the K nearest. |
 | MERGE_SINGLE | Use a single core for the calculating the distance of each point and the select the K nearest. |
-| UNKNOWN_PARAMETERS | Use variables instead of the static values | 
+| VARIABLE_PARAMETERS | Use variables instead of the static values |
+| PARALLELIZATION | Use OpenMP to parallelize the distance calculation. |
+| PARALLEL_REDUCTION | Use OpenMP to parallelize the distance calculation and use reduction to calculate the total distance. |

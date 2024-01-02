@@ -172,14 +172,18 @@ void get_k_NN(Point new_point, Point *known_points, int num_points,
 
 // bdmendes: This is embarrassingly parallel.
 // bdmendes: Speedup: 2
+#ifdef PARALLELIZATION
 #pragma omp parallel for
+#endif
     for (int i = 0; i < num_points; i++) {
         DATA_TYPE distance = (DATA_TYPE)0.0;
 
         // calculate the Euclidean distance
 
         // bdmendes: Let us apply a parallel reduction here.
-        // #pragma omp parallel for reduction(+ : distance)
+#if defined(PARALLELIZATION) && defined(PARALLEL_REDUCTION)
+#pragma omp parallel for reduction(+ : distance)
+#endif
         // bdmendes: Speedup: 0.043
         // bdmendes: We are yielding too many threads here.
         for (int j = 0; j < num_features; j++) {
@@ -187,7 +191,7 @@ void get_k_NN(Point new_point, Point *known_points, int num_points,
                              (DATA_TYPE)known_points[i].features[j];
             distance += diff * diff;
         }
-        //distance = sqrt(distance);
+        // distance = sqrt(distance);
 
         dist_points[i].classification_id = known_points[i].classification_id;
         dist_points[i].distance = distance;
@@ -195,8 +199,8 @@ void get_k_NN(Point new_point, Point *known_points, int num_points,
 
     select_k_nearest(dist_points, num_points, k);
 
-#ifdef ASSIGNMENT_LOOP
-    copy_k_nearest(dist_points, num_points, best_points, k);
+#ifndef MEMSET
+    copy_k_nearest(dist_points, best_points, k);
 #else
     copy_k_nearest_specific(dist_points, best_points, k);
 #endif
@@ -211,14 +215,18 @@ void get_k_NN_static(Point new_point, Point *known_points,
 
 // bdmendes: This is embarrassingly parallel.
 // bdmendes: Speedup: 2
+#ifdef PARALLELIZATION
 #pragma omp parallel for
+#endif
     for (int i = 0; i < NUM_TRAINING_SAMPLES; i++) {
         DATA_TYPE distance = (DATA_TYPE)0.0;
 
         // calculate the Euclidean distance
 
         // bdmendes: Let us apply a parallel reduction here.
-        // #pragma omp parallel for reduction(+ : distance)
+#if defined(PARALLELIZATION) && defined(PARALLEL_REDUCTION)
+#pragma omp parallel for reduction(+ : distance)
+#endif
         // bdmendes: Speedup: 0.043
         // bdmendes: We are yielding too many threads here.
         for (int j = 0; j < NUM_FEATURES; j++) {
@@ -226,7 +234,7 @@ void get_k_NN_static(Point new_point, Point *known_points,
                              (DATA_TYPE)known_points[i].features[j];
             distance += diff * diff;
         }
-        //distance = sqrt(distance);
+        // distance = sqrt(distance);
 
         dist_points[i].classification_id = known_points[i].classification_id;
         dist_points[i].distance = distance;
@@ -234,7 +242,7 @@ void get_k_NN_static(Point new_point, Point *known_points,
 
     select_k_nearest_static(dist_points);
 
-#ifdef ASSIGNMENT_LOOP
+#ifndef MEMSET
     copy_k_nearest_static(dist_points, best_points);
 #else
     copy_k_nearest_specific_static(dist_points, best_points);
@@ -271,7 +279,7 @@ CLASS_ID_TYPE plurality_voting(BestPoint *best_points, int num_classes) {
     CLASS_ID_TYPE histogram[num_classes]; // maximum is the value of k
 
     // initialize the histogram
-#ifdef ASSIGNMENT_LOOP
+#ifndef MEMSET
     // bdmendes: We can do this with a memset.
     for (int i = 0; i < num_classes; i++) {
         histogram[i] = 0;
@@ -327,7 +335,7 @@ CLASS_ID_TYPE plurality_voting_static(BestPoint *best_points) {
     CLASS_ID_TYPE histogram[NUM_CLASSES]; // maximum is the value of k
 
     // initialize the histogram
-#ifdef ASSIGNMENT_LOOP
+#ifndef MEMSET
     for (int i = 0; i < NUM_CLASSES; i++) {
         histogram[i] = 0;
     }
