@@ -198,6 +198,7 @@ int main(int argc, char **argv) {
             Contiguosly storing the features in memory increases
             cache locality while accessing the same features.
     */
+#ifdef SOA
     DATA_TYPE known_points_features[NUM_FEATURES * NUM_TRAINING_SAMPLES];
     CLASS_ID_TYPE known_points_classifications[NUM_TRAINING_SAMPLES];
 #ifdef INVERTED
@@ -208,6 +209,7 @@ int main(int argc, char **argv) {
     Points points =
         extract_soa(known_points, (DATA_TYPE *)known_points_features,
                     (CLASS_ID_TYPE *)known_points_classifications);
+#endif
 #endif
 
 #if TIMMING == 1
@@ -239,7 +241,7 @@ int main(int argc, char **argv) {
 #ifndef VARIABLE_PARAMETERS
 #ifndef SOA
         CLASS_ID_TYPE instance_class =
-            knn_classifyinstance_static(*new_point, known_points);
+            knn_classifyinstance(*new_point, known_points);
 #else
 #ifdef INVERTED
         CLASS_ID_TYPE instance_class =
