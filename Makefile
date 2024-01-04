@@ -7,12 +7,8 @@ ifneq ($(words $(MAKECMDGOALS)),1)
 $(error Please choose one and only one scenario to run.)
 endif
 
-# Compiler flags. Use COPT to set optimization flags.
-ifndef COPT
-$(warning COPT is not set. Using default COPT=-O0.)
-COPT = -O0
-endif
-CXX = gcc
+
+CXX = gcc #/opt/intel/oneapi/compiler/latest/bin/icx
 CGFLAGS = -Wall -std=gnu99 -lm -fopenmp -pg -fno-builtin -Wno-unused-parameter
 CFLAGS = $(CGFLAGS) $(COPT)
 
@@ -20,30 +16,50 @@ CFLAGS = $(CGFLAGS) $(COPT)
 SRCDIR = src
 SRCFILES = $(wildcard $(SRCDIR)/*.c)
 space := $(subst ,, )
-PROG = knn_$(MAKECMDGOALS)_$(subst $(space),_,$(COPT)).out
+ifndef PROG
+PROG = knn_$(MAKECMDGOALS)_$(subst $(space),_,$(DT))_$(subst $(space),_,$(COPT))_$(subst $(space),_,$(OPTFLAGS)).out
+endif
+.PHONY: testing a1a a1b a2 a3 clean gprof .build .a 
 
-.PHONY: testing a1a a1b a2 a3 clean gprof
+
+.build:
+ifndef COPT # Compiler flags. Use COPT to set optimization flags.
+$(warning COPT is not set. Using default COPT=-O0.)
+COPT = -O0
+endif
 
 ifndef DT
 $(warning DT is not set. Using default DT=1 (double).)
 DT = 1
 endif
 
-a1a:
-	cp data/scenario-wisdm/* $(SRCDIR)
-	$(CXX) -D VERIFY=1 -D K=3 -D DT=$(DT) $(CFLAGS) $(SRCFILES) -o $(PROG)
+ifndef OPTFLAGS
+$(warning OPTFLAGS is not set. No code optimizations in place.)
+endif
 
-a1b:
+.a: .build
 	cp data/scenario-wisdm/* $(SRCDIR)
-	$(CXX) -D VERIFY=1 -D K=20 -D DT=$(DT) $(CFLAGS) $(SRCFILES) -o $(PROG)
+	
+a1a: .a
+	$(eval SCENARIO_FLAGS = -D K=3 -D VARIABLE_PARAMETERS -D VERIFY=1)
+	$(CXX) -D DT=$(DT) $(CFLAGS) $(SCENARIO_FLAGS) $(OPTFLAGS) $(SRCFILES)  -o $(PROG)
+	
+a1b: .a
+	$(eval SCENARIO_FLAGS = -D K=20 -D VARIABLE_PARAMETERS -D VERIFY=1)
+	$(CXX) -D DT=$(DT) $(CFLAGS) $(SCENARIO_FLAGS) $(OPTFLAGS) $(SRCFILES) -o $(PROG)
 
-a2:
+a1c: .a
+	$(eval SCENARIO_FLAGS = -D K=3 -D VERIFY=1 -D DT=2)
+	$(CXX) $(CFLAGS) $(SCENARIO_FLAGS) $(OPTFLAGS) $(SRCFILES)  -o $(PROG)
+
+a2: .build
 	cp data/scenario-gen100x8x10000/* $(SRCDIR)
-	$(CXX) -D K=20 -D DT=$(DT) -D NUM_TRAINING_SAMPLES=8004 -D NUM_TESTING_SAMPLES=1996 -D NUM_FEATURES=100 -D NUM_CLASSES=8 $(CFLAGS) $(SRCFILES) -o $(PROG)
+	$(CXX) -D DT=$(DT) $(CFLAGS) $(OPTFLAGS) $(SRCFILES) -o $(PROG)
 
-a3:
+a3: .build
 	cp -r data/scenario-gen100x8x50000/* $(SRCDIR)
-	$(CXX) -D K=20 -D DT=$(DT) -D NUM_TRAINING_SAMPLES=40002 -D NUM_TESTING_SAMPLES=9998 -D NUM_FEATURES=100 -D NUM_CLASSES=8 $(CFLAGS) $(SRCFILES) -o $(PROG)
+	$(eval READ=2)
+	$(CXX) -D DT=$(DT) $(CFLAGS) $(OPTFLAGS) $(SRCFILES) -o $(PROG)
 
 gprof:
 ifndef FILE
