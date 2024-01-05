@@ -18,10 +18,10 @@ def main():
     global_power = []
     flags = []
 
-    for f in files:
-        if f.startswith(scenario) and f.endswith(".timing"):
-            with open(f, "r") as f:
-                flag = f.name.replace(".timing", "").replace(scenario + "-", "")
+    for filename in files:
+        if filename.startswith(scenario) and filename.endswith(".timing"):
+            with open(filename, "r") as f:
+                flag = filename.replace(".timing", "").replace(scenario + "-", "")
                 if (
                     flag != "parallel_reduction"
                     and flag != "dt1_native"
@@ -35,9 +35,9 @@ def main():
                         global_timings.append(timings)
                         flags.append(flag)
 
-        if f.startswith(scenario) and f.endswith(".power"):
-            with open(f, "r") as f:
-                flag = f.name.replace(".timing", "").replace(scenario + "-", "")
+        if filename.startswith(scenario) and filename.endswith(".power"):
+            with open(filename, "r") as f:
+                flag = filename.replace(".power", "").replace(scenario + "-", "")
                 if (
                     flag != "parallel_reduction"
                     and flag != "dt1_native"
@@ -46,9 +46,17 @@ def main():
                     and flag != "dt2_native"
                     and flag != "march_native"
                 ):
-                    powers = [float(line.rstrip()) for line in f.readlines()]
+                    lines = f.readlines()
+                    j = 2
+                    powers = []
+                    while j < len(lines):
+                        power = lines[j].split(",")[92]
+                        # print(power)
+                        powers.append(float(power))
+                        j += 3
+
                     if powers != []:
-                        global_power.append(timings)
+                        global_power.append(powers)
 
     # timings
     plt.figure(figsize=(25, 10))
@@ -58,6 +66,7 @@ def main():
     ax.set_ylabel("Time (s)")
     ax.set_title("Timings for scenario " + scenario)
     plt.savefig("plots/" + scenario + ".timings.png")
+    plt.clf()
 
     # power
     plt.figure(figsize=(25, 10))
@@ -67,6 +76,7 @@ def main():
     ax.set_ylabel("Power (W)")
     ax.set_title("Power for scenario " + scenario)
     plt.savefig("plots/" + scenario + ".power.png")
+    plt.clf()
 
 
 if __name__ == "__main__":
