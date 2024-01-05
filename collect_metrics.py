@@ -28,7 +28,8 @@ if len(sys.argv) < 4:
     exit(1)
 
 if sys.argv[2] == "all":
-    os.system(f"rm {sys.argv[1]}*.timing")
+    os.system(f"rm {sys.argv[1]}*.timing*")
+    os.system(f"rm {sys.argv[1]}*.power*")
 
     executables = [
         filename for filename in os.listdir() if filename.startswith(sys.argv[1])
@@ -39,7 +40,7 @@ if sys.argv[2] == "all":
             os.system(f"./{executable} >> {timings_filename}.timing")
             time.sleep(1)
             os.system(
-                f"pcm -csv={timings_filename}.powertmp{i} -- ./{executable} > /dev/null"
+                f"sudo pcm -csv={timings_filename}.powertmp{i} -- ./{executable} > /dev/null"
             )
 
         # remove powertmp and append to power
@@ -48,16 +49,19 @@ if sys.argv[2] == "all":
         for i in range(int(sys.argv[3])):
             os.system(f"cat {timings_filename}.powertmp{i} >> {timings_filename}.power")
             os.system(f"echo '' >> {timings_filename}.power")
-            os.system(f"rm {timings_filename}.powertmp{i}")
+            os.system(f"rm -f {timings_filename}.powertmp{i}")
 
 else:
     filename = f"{sys.argv[1]}-{sys.argv[2]}"
-    os.system(f"rm {filename}.timing")
+    os.system(f"rm -f {filename}.timing*")
+    os.system(f"rm -f {filename}.power*")
 
     for i in range(int(sys.argv[3])):
         os.system(f"./{filename}.out >> {filename}.timing")
         time.sleep(1)
-        os.system(f"pcm -csv={filename}.powertmp{i} -- ./{filename}.out > /dev/null")
+        os.system(
+            f"sudo pcm -csv={filename}.powertmp{i} -- ./{filename}.out > /dev/null"
+        )
 
     # remove powertmp and append to power
     os.system(f"rm {filename}.power")
@@ -65,4 +69,4 @@ else:
     for i in range(int(sys.argv[3])):
         os.system(f"cat {filename}.powertmp{i} >> {filename}.power")
         os.system(f"echo '' >> {filename}.power")
-        os.system(f"rm {filename}.powertmp{i}")
+        os.system(f"rm -f {filename}.powertmp{i}")
