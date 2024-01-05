@@ -1,10 +1,12 @@
 **.out
 **.o
+**.timing
+**.power
 src/*.dat
 src/params.h
 analysis*.txt
 vscode/
 *analysis.txt
 .vscode/
-__pycache__/
 vitis_hls.log
+__pycache__/
