@@ -6,3 +6,5 @@ analysis*.txt
 vscode/
 *analysis.txt
 .vscode/
+__pycache__/
+vitis_hls.log

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'train.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="hardware-accelerator" solutionName="solution1" date="2024-01-05T16:41:42.322+0000" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'test.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="hardware-accelerator" solutionName="solution1" date="2024-01-05T16:41:42.321+0000" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'key-READ1-k3.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="hardware-accelerator" solutionName="solution1" date="2024-01-05T16:41:42.320+0000" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'key-READ1-k20.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="hardware-accelerator" solutionName="solution1" date="2024-01-05T16:41:42.318+0000" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

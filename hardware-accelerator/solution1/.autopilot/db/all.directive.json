@@ -1,0 +1,44 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "hw_get_eucledean_distances",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "hw_get_eucledean_distances"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/sirze/repos/CHE/hardware-accelerator/solution1/directives.tcl",
+    "sourceLine": 7,
+    "success": true
+  },
+  {
+    "functionLabel": "",
+    "functionName": "hw_get_eucledean_distances",
+    "id": 1,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "hw_get_eucledean_distances"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/sirze/repos/CHE/hardware-accelerator/solution1/csynth.tcl",
+    "sourceLine": 33,
+    "success": true
+  }
+]

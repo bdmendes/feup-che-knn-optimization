@@ -23,7 +23,7 @@ CLASS_ID_TYPE knn_classifyinstance_soa_merge(Point new_point, Points points,
 CLASS_ID_TYPE knn_classifyinstance_soa_inverted(Point new_point,
                                                 PointsInverted points);
 
-CLASS_ID_TYPE knn_classifyinstance_soa_static(Point new_point, Points points);
+CLASS_ID_TYPE knn_classifyinstance_soa(Point new_point, Points points);
 
 CLASS_ID_TYPE knn_classifyinstance_soa_merge_static(Point new_point,
                                                     Points points);

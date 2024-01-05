@@ -245,13 +245,13 @@ int main(int argc, char **argv) {
 #else
 #ifdef INVERTED
         CLASS_ID_TYPE instance_class =
-            knn_classifyinstance_soa_inverted_static(*new_point, points);
+            knn_classifyinstance_soa_inverted(*new_point, points);
 #elif MERGE_DISTANCE_SELECT
         CLASS_ID_TYPE instance_class =
-            knn_classifyinstance_soa_merge_static(*new_point, points);
+            knn_classifyinstance_soa_merge(*new_point, points);
 #else
         CLASS_ID_TYPE instance_class =
-            knn_classifyinstance_soa_static(*new_point, points);
+            knn_classifyinstance_soa(*new_point, points);
 #endif
 #endif
 #else

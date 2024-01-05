@@ -19,7 +19,7 @@ space := $(subst ,, )
 ifndef PROG
 PROG = knn_$(MAKECMDGOALS)_$(subst $(space),_,$(DT))_$(subst $(space),_,$(COPT))_$(subst $(space),_,$(OPTFLAGS)).out
 endif
-.PHONY: testing a1a a1b a2 a3 clean gprof .build .a 
+.PHONY: a1a a1b a2 a3 clean gprof .build .a .hw_testbench a1c-hw_testbench
 
 
 .build:
@@ -37,6 +37,10 @@ ifndef OPTFLAGS
 $(warning OPTFLAGS is not set. No code optimizations in place.)
 endif
 
+.hw_testbench: .build
+	$(eval SRCFILES = $(filter-out $(SRCDIR)/main.c, $(SRCFILES)))
+	$(eval SRCFILES += $(wildcard $(SRCDIR)/hardware-accelerator/*.c))
+
 .a: .build
 	cp data/scenario-wisdm/* $(SRCDIR)
 	
@@ -52,6 +56,10 @@ a1c: .a
 	$(eval SCENARIO_FLAGS = -D K=3 -D VERIFY=1 -D DT=2)
 	$(CXX) $(CFLAGS) $(SCENARIO_FLAGS) $(OPTFLAGS) $(SRCFILES)  -o $(PROG)
 
+a1c-hw_testbench: .a .hw_testbench
+	$(eval SCENARIO_FLAGS = -D K=3 -D VERIFY=1 -D DT=2 -D TIMMING=1)
+	$(CXX) $(CFLAGS) $(SCENARIO_FLAGS) $(OPTFLAGS) $(SRCFILES)  -o testbench.out
+
 a2: .build
 	cp data/scenario-gen100x8x10000/* $(SRCDIR)
 	$(CXX) -D DT=$(DT) $(CFLAGS) $(OPTFLAGS) $(SRCFILES) -o $(PROG)
@@ -60,6 +68,9 @@ a3: .build
 	cp -r data/scenario-gen100x8x50000/* $(SRCDIR)
 	$(eval READ=2)
 	$(CXX) -D DT=$(DT) $(CFLAGS) $(OPTFLAGS) $(SRCFILES) -o $(PROG)
+
+
+
 
 gprof:
 ifndef FILE

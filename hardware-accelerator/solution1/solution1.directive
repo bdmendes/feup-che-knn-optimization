@@ -1,0 +1,15 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="hw_get_eucledean_distances" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="hw_get_eucledean_distances"/>
+            </pragma>
+        </directive>
+        <directive functionName="hw_get_eucledean_distances" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="hw_get_eucledean_distances"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

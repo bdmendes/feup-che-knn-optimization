@@ -1,0 +1,19 @@
+{
+  "0": {
+    "basicblocks": 19,
+    "calls": "",
+    "file": "knn_hw_accel.c",
+    "fileloc": 4,
+    "instructions": 58,
+    "loads": {
+      "L": 2,
+      "T": 1
+    },
+    "name": "hw_get_eucledean_distances",
+    "stores": {
+      "L": 2,
+      "T": 1
+    },
+    "total_instructions": 58
+  }
+}

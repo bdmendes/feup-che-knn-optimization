@@ -1,0 +1,80 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../../src/hardware-accelerator/hw_testbench.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'sirze' on host 'thickerpad-solid' (Linux_x86_64 version 5.15.0-91-generic) on Fri Jan 05 16:40:38 WET 2024
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/sirze/repos/CHE/hardware-accelerator/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /home/sirze/repos/CHE/hardware-accelerator/solution1/csim/build/apcc_db_sirze/404901704472838837242
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 3.03 seconds. Total CPU system time: 0.2 seconds. Total elapsed time: 3.07 seconds; peak allocated memory: 99.641 MB.
+   Compiling(apcc) ../../../../src/io.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'sirze' on host 'thickerpad-solid' (Linux_x86_64 version 5.15.0-91-generic) on Fri Jan 05 16:40:42 WET 2024
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/sirze/repos/CHE/hardware-accelerator/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /home/sirze/repos/CHE/hardware-accelerator/solution1/csim/build/apcc_db_sirze/405541704472842981666
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 1.72 seconds. Total CPU system time: 0.11 seconds. Total elapsed time: 1.67 seconds; peak allocated memory: 99.645 MB.
+   Compiling(apcc) ../../../../src/knn.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'sirze' on host 'thickerpad-solid' (Linux_x86_64 version 5.15.0-91-generic) on Fri Jan 05 16:40:45 WET 2024
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/sirze/repos/CHE/hardware-accelerator/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /home/sirze/repos/CHE/hardware-accelerator/solution1/csim/build/apcc_db_sirze/406161704472845868260
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 1.82 seconds. Total CPU system time: 0.12 seconds. Total elapsed time: 1.77 seconds; peak allocated memory: 99.645 MB.
+   Compiling(apcc) ../../../../src/hardware-accelerator/knn_hw_accel.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'sirze' on host 'thickerpad-solid' (Linux_x86_64 version 5.15.0-91-generic) on Fri Jan 05 16:40:48 WET 2024
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/sirze/repos/CHE/hardware-accelerator/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /home/sirze/repos/CHE/hardware-accelerator/solution1/csim/build/apcc_db_sirze/406791704472848802087
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 1.76 seconds. Total CPU system time: 0.13 seconds. Total elapsed time: 1.73 seconds; peak allocated memory: 99.641 MB.
+   Compiling(apcc) ../../../../src/preprocess.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'sirze' on host 'thickerpad-solid' (Linux_x86_64 version 5.15.0-91-generic) on Fri Jan 05 16:40:51 WET 2024
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/sirze/repos/CHE/hardware-accelerator/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /home/sirze/repos/CHE/hardware-accelerator/solution1/csim/build/apcc_db_sirze/407411704472851677948
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 1.76 seconds. Total CPU system time: 0.13 seconds. Total elapsed time: 1.71 seconds; peak allocated memory: 99.645 MB.
+   Compiling(apcc) ../../../../src/timer.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'sirze' on host 'thickerpad-solid' (Linux_x86_64 version 5.15.0-91-generic) on Fri Jan 05 16:40:54 WET 2024
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/sirze/repos/CHE/hardware-accelerator/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /home/sirze/repos/CHE/hardware-accelerator/solution1/csim/build/apcc_db_sirze/408051704472854470887
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 1.77 seconds. Total CPU system time: 0.13 seconds. Total elapsed time: 1.72 seconds; peak allocated memory: 99.645 MB.
+   Compiling(apcc) ../../../../src/utils.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'sirze' on host 'thickerpad-solid' (Linux_x86_64 version 5.15.0-91-generic) on Fri Jan 05 16:40:57 WET 2024
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/sirze/repos/CHE/hardware-accelerator/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /home/sirze/repos/CHE/hardware-accelerator/solution1/csim/build/apcc_db_sirze/408671704472857330220
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 1.82 seconds. Total CPU system time: 0.16 seconds. Total elapsed time: 1.82 seconds; peak allocated memory: 99.641 MB.
+   Generating csim.exe
+Data points initialized with WISDM dataset...
+Initialization done.
+
+Executing kNN...
+kNN done.
+
+kNN: number of classes = 6
+kNN: number of training instances = 4336
+kNN: number of features = 43
+kNN: k = 20
+kNN: data type used = double
+kNN: number of classified instances = 1082
+kNN: number of classifications wrong = 338
+kNN: number of classifications right = 744
+kNN: accuracy = 68.76 %
+
+kNN: verifying results...
+Verifying results...
+Verification is complete: Passed!
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

@@ -1,0 +1,20 @@
+{
+    "0": {
+        "name": "hw_get_eucledean_distances",
+        "file": "knn_hw_accel.c",
+        "fileloc": "4",
+        "instructions": "240",
+        "total_instructions": "240",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

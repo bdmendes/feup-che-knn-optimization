@@ -1,0 +1,60 @@
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c:2856:5: warning: Added loop label VITIS_LOOP_30_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < num_new_points; ++i)
+    ^~~
+    VITIS_LOOP_30_1: 
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c:2856:5: note: FIX-IT applied suggested code changes
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c:2942:5: warning: Added loop label VITIS_LOOP_116_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < num_points; i++)
+    ^~~
+    VITIS_LOOP_116_1: 
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c:2942:5: note: FIX-IT applied suggested code changes
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c:2944:9: warning: Added loop label VITIS_LOOP_118_2:   [xilinx-label-all-loops]
+        for (int j = 0; j < num_features; j++)
+        ^~~
+        VITIS_LOOP_118_2: 
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c:2944:9: note: FIX-IT applied suggested code changes
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c:2958:5: warning: Added loop label VITIS_LOOP_132_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < num_new_points; i++)
+    ^~~
+    VITIS_LOOP_132_1: 
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c:2958:5: note: FIX-IT applied suggested code changes
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c:2960:9: warning: Added loop label VITIS_LOOP_134_2:   [xilinx-label-all-loops]
+        for (int j = 0; j < num_features; j++)
+        ^~~
+        VITIS_LOOP_134_2: 
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c:2960:9: note: FIX-IT applied suggested code changes
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c:2974:5: warning: Added loop label VITIS_LOOP_148_1:   [xilinx-label-all-loops]
+    for (int j = 0; j < num_features; j++)
+    ^~~
+    VITIS_LOOP_148_1: 
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c:2974:5: note: FIX-IT applied suggested code changes
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c:2991:5: warning: Added loop label VITIS_LOOP_165_1:   [xilinx-label-all-loops]
+    for (int j = 0; j < num_features; j++)
+    ^~~
+    VITIS_LOOP_165_1: 
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c:2991:5: note: FIX-IT applied suggested code changes
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c:2998:5: warning: Added loop label VITIS_LOOP_172_2:   [xilinx-label-all-loops]
+    for (int i = 0; i < num_points; i++)
+    ^~~
+    VITIS_LOOP_172_2: 
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c:2998:5: note: FIX-IT applied suggested code changes
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c:3000:9: warning: Added loop label VITIS_LOOP_174_3:   [xilinx-label-all-loops]
+        for (int j = 0; j < num_features; j++)
+        ^~~
+        VITIS_LOOP_174_3: 
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c:3000:9: note: FIX-IT applied suggested code changes
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c:3017:5: warning: Added loop label VITIS_LOOP_205_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < num_points; i++)
+    ^~~
+    VITIS_LOOP_205_1: 
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c:3017:5: note: FIX-IT applied suggested code changes
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c:3019:9: warning: Added loop label VITIS_LOOP_207_2:   [xilinx-label-all-loops]
+        for (int j = 0; j < num_features; j++)
+        ^~~
+        VITIS_LOOP_207_2: 
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c:3019:9: note: FIX-IT applied suggested code changes
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c:3046:5: warning: Added loop label VITIS_LOOP_234_1:   [xilinx-label-all-loops]
+    for (int j = 0; j < num_features; j++)
+    ^~~
+    VITIS_LOOP_234_1: 
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c:3046:5: note: FIX-IT applied suggested code changes

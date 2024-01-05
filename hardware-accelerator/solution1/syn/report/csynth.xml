@@ -1,0 +1,531 @@
+<profile>
+    <ReportVersion>
+        <Version>2023.2</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>zynq</ProductFamily>
+        <Part>xc7z020-clg484-1</Part>
+        <TopModelName>hw_get_eucledean_distances</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>2.70</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>7.297</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>4651</Best-caseLatency>
+            <Average-caseLatency>4651</Average-caseLatency>
+            <Worst-caseLatency>4651</Worst-caseLatency>
+            <Best-caseRealTimeLatency>46.510 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>46.510 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>46.510 us</Worst-caseRealTimeLatency>
+            <Interval-min>4652</Interval-min>
+            <Interval-max>4652</Interval-max>
+        </SummaryOfOverallLatency>
+        <SummaryOfLoopLatency>
+            <VITIS_LOOP_9_1>
+                <Slack>7.30</Slack>
+                <TripCount>4336</TripCount>
+                <Latency>4649</Latency>
+                <AbsoluteTimeLatency>46490</AbsoluteTimeLatency>
+                <PipelineII>1</PipelineII>
+                <PipelineDepth>315</PipelineDepth>
+                <InstanceList/>
+            </VITIS_LOOP_9_1>
+        </SummaryOfLoopLatency>
+        <SummaryOfViolations>
+            <IssueType>-</IssueType>
+            <ViolationType>-</ViolationType>
+            <SourceLocation>src/hardware-accelerator/knn_hw_accel.c:9</SourceLocation>
+            <SummaryOfLoopViolations>
+                <VITIS_LOOP_9_1>
+                    <Name>VITIS_LOOP_9_1</Name>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>src/hardware-accelerator/knn_hw_accel.c:9</SourceLocation>
+                </VITIS_LOOP_9_1>
+            </SummaryOfLoopViolations>
+        </SummaryOfViolations>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <DSP>731</DSP>
+            <FF>83224</FF>
+            <LUT>124768</LUT>
+            <BRAM_18K>0</BRAM_18K>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>280</BRAM_18K>
+            <DSP>220</DSP>
+            <FF>106400</FF>
+            <LUT>53200</LUT>
+            <URAM>0</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>hw_get_eucledean_distances</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst</name>
+            <Object>hw_get_eucledean_distances</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_start</name>
+            <Object>hw_get_eucledean_distances</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_done</name>
+            <Object>hw_get_eucledean_distances</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_idle</name>
+            <Object>hw_get_eucledean_distances</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_ready</name>
+            <Object>hw_get_eucledean_distances</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>new_point</name>
+            <Object>new_point</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>2816</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>points_features</name>
+            <Object>points_features</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>dist_points_distances</name>
+            <Object>dist_points_distances</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>dist_points_distances_ap_vld</name>
+            <Object>dist_points_distances</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="2">
+            <ModuleName>hw_get_eucledean_distances</ModuleName>
+            <BindInstances>add_ln9_fu_1374_p2 dsub_64ns_64ns_64_7_full_dsp_1_U1 dmul_64ns_64ns_64_7_max_dsp_1_U87 dsub_64ns_64ns_64_7_full_dsp_1_U2 dmul_64ns_64ns_64_7_max_dsp_1_U88 dsub_64ns_64ns_64_7_full_dsp_1_U3 dmul_64ns_64ns_64_7_max_dsp_1_U89 dsub_64ns_64ns_64_7_full_dsp_1_U5 dmul_64ns_64ns_64_7_max_dsp_1_U90 dsub_64ns_64ns_64_7_full_dsp_1_U7 dmul_64ns_64ns_64_7_max_dsp_1_U91 dsub_64ns_64ns_64_7_full_dsp_1_U9 dmul_64ns_64ns_64_7_max_dsp_1_U92 dsub_64ns_64ns_64_7_full_dsp_1_U11 dmul_64ns_64ns_64_7_max_dsp_1_U93 dsub_64ns_64ns_64_7_full_dsp_1_U13 dmul_64ns_64ns_64_7_max_dsp_1_U94 dsub_64ns_64ns_64_7_full_dsp_1_U15 dmul_64ns_64ns_64_7_max_dsp_1_U95 dsub_64ns_64ns_64_7_full_dsp_1_U17 dmul_64ns_64ns_64_7_max_dsp_1_U96 dsub_64ns_64ns_64_7_full_dsp_1_U19 dmul_64ns_64ns_64_7_max_dsp_1_U97 dsub_64ns_64ns_64_7_full_dsp_1_U21 dmul_64ns_64ns_64_7_max_dsp_1_U98 dsub_64ns_64ns_64_7_full_dsp_1_U23 dmul_64ns_64ns_64_7_max_dsp_1_U99 dsub_64ns_64ns_64_7_full_dsp_1_U25 dmul_64ns_64ns_64_7_max_dsp_1_U100 dsub_64ns_64ns_64_7_full_dsp_1_U27 dmul_64ns_64ns_64_7_max_dsp_1_U101 dsub_64ns_64ns_64_7_full_dsp_1_U29 dmul_64ns_64ns_64_7_max_dsp_1_U102 dsub_64ns_64ns_64_7_full_dsp_1_U31 dmul_64ns_64ns_64_7_max_dsp_1_U103 dsub_64ns_64ns_64_7_full_dsp_1_U33 dmul_64ns_64ns_64_7_max_dsp_1_U104 dsub_64ns_64ns_64_7_full_dsp_1_U35 dmul_64ns_64ns_64_7_max_dsp_1_U105 dsub_64ns_64ns_64_7_full_dsp_1_U37 dmul_64ns_64ns_64_7_max_dsp_1_U106 dsub_64ns_64ns_64_7_full_dsp_1_U39 dmul_64ns_64ns_64_7_max_dsp_1_U107 dsub_64ns_64ns_64_7_full_dsp_1_U41 dmul_64ns_64ns_64_7_max_dsp_1_U108 dsub_64ns_64ns_64_7_full_dsp_1_U43 dmul_64ns_64ns_64_7_max_dsp_1_U109 dsub_64ns_64ns_64_7_full_dsp_1_U45 dmul_64ns_64ns_64_7_max_dsp_1_U110 dsub_64ns_64ns_64_7_full_dsp_1_U47 dmul_64ns_64ns_64_7_max_dsp_1_U111 dsub_64ns_64ns_64_7_full_dsp_1_U49 dmul_64ns_64ns_64_7_max_dsp_1_U112 dsub_64ns_64ns_64_7_full_dsp_1_U51 dmul_64ns_64ns_64_7_max_dsp_1_U113 dsub_64ns_64ns_64_7_full_dsp_1_U53 dmul_64ns_64ns_64_7_max_dsp_1_U114 dsub_64ns_64ns_64_7_full_dsp_1_U55 dmul_64ns_64ns_64_7_max_dsp_1_U115 dsub_64ns_64ns_64_7_full_dsp_1_U57 dmul_64ns_64ns_64_7_max_dsp_1_U116 dsub_64ns_64ns_64_7_full_dsp_1_U59 dmul_64ns_64ns_64_7_max_dsp_1_U117 dsub_64ns_64ns_64_7_full_dsp_1_U61 dmul_64ns_64ns_64_7_max_dsp_1_U118 dsub_64ns_64ns_64_7_full_dsp_1_U63 dmul_64ns_64ns_64_7_max_dsp_1_U119 dsub_64ns_64ns_64_7_full_dsp_1_U65 dmul_64ns_64ns_64_7_max_dsp_1_U120 dsub_64ns_64ns_64_7_full_dsp_1_U67 dmul_64ns_64ns_64_7_max_dsp_1_U121 dsub_64ns_64ns_64_7_full_dsp_1_U69 dmul_64ns_64ns_64_7_max_dsp_1_U122 dsub_64ns_64ns_64_7_full_dsp_1_U71 dmul_64ns_64ns_64_7_max_dsp_1_U123 dsub_64ns_64ns_64_7_full_dsp_1_U73 dmul_64ns_64ns_64_7_max_dsp_1_U124 dsub_64ns_64ns_64_7_full_dsp_1_U75 dmul_64ns_64ns_64_7_max_dsp_1_U125 dsub_64ns_64ns_64_7_full_dsp_1_U77 dmul_64ns_64ns_64_7_max_dsp_1_U126 dsub_64ns_64ns_64_7_full_dsp_1_U79 dmul_64ns_64ns_64_7_max_dsp_1_U127 dsub_64ns_64ns_64_7_full_dsp_1_U81 dmul_64ns_64ns_64_7_max_dsp_1_U128 dsub_64ns_64ns_64_7_full_dsp_1_U83 dmul_64ns_64ns_64_7_max_dsp_1_U129 dadd_64ns_64ns_64_7_full_dsp_1_U4 dadd_64ns_64ns_64_7_full_dsp_1_U6 dadd_64ns_64ns_64_7_full_dsp_1_U8 dadd_64ns_64ns_64_7_full_dsp_1_U10 dadd_64ns_64ns_64_7_full_dsp_1_U12 dadd_64ns_64ns_64_7_full_dsp_1_U14 dadd_64ns_64ns_64_7_full_dsp_1_U16 dadd_64ns_64ns_64_7_full_dsp_1_U18 dadd_64ns_64ns_64_7_full_dsp_1_U20 dadd_64ns_64ns_64_7_full_dsp_1_U22 dadd_64ns_64ns_64_7_full_dsp_1_U24 dadd_64ns_64ns_64_7_full_dsp_1_U26 dadd_64ns_64ns_64_7_full_dsp_1_U28 dadd_64ns_64ns_64_7_full_dsp_1_U30 dadd_64ns_64ns_64_7_full_dsp_1_U32 dadd_64ns_64ns_64_7_full_dsp_1_U34 dadd_64ns_64ns_64_7_full_dsp_1_U36 dadd_64ns_64ns_64_7_full_dsp_1_U38 dadd_64ns_64ns_64_7_full_dsp_1_U40 dadd_64ns_64ns_64_7_full_dsp_1_U42 dadd_64ns_64ns_64_7_full_dsp_1_U44 dadd_64ns_64ns_64_7_full_dsp_1_U46 dadd_64ns_64ns_64_7_full_dsp_1_U48 dadd_64ns_64ns_64_7_full_dsp_1_U50 dadd_64ns_64ns_64_7_full_dsp_1_U52 dadd_64ns_64ns_64_7_full_dsp_1_U54 dadd_64ns_64ns_64_7_full_dsp_1_U56 dadd_64ns_64ns_64_7_full_dsp_1_U58 dadd_64ns_64ns_64_7_full_dsp_1_U60 dadd_64ns_64ns_64_7_full_dsp_1_U62 dadd_64ns_64ns_64_7_full_dsp_1_U64 dadd_64ns_64ns_64_7_full_dsp_1_U66 dadd_64ns_64ns_64_7_full_dsp_1_U68 dadd_64ns_64ns_64_7_full_dsp_1_U70 dadd_64ns_64ns_64_7_full_dsp_1_U72 dadd_64ns_64ns_64_7_full_dsp_1_U74 dadd_64ns_64ns_64_7_full_dsp_1_U76 dadd_64ns_64ns_64_7_full_dsp_1_U78 dadd_64ns_64ns_64_7_full_dsp_1_U80 dadd_64ns_64ns_64_7_full_dsp_1_U82 dadd_64ns_64ns_64_7_full_dsp_1_U84 dadd_64ns_64ns_64_7_full_dsp_1_U85 dadd_64ns_64ns_64_7_full_dsp_1_U86</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>hw_get_eucledean_distances</Name>
+            <Loops>
+                <VITIS_LOOP_9_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.297</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>4651</Best-caseLatency>
+                    <Average-caseLatency>4651</Average-caseLatency>
+                    <Worst-caseLatency>4651</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>46.510 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>46.510 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>46.510 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>4652</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_9_1>
+                        <Name>VITIS_LOOP_9_1</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>4336</TripCount>
+                        <Latency>4649</Latency>
+                        <AbsoluteTimeLatency>46.490 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>315</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_9_1>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>src/hardware-accelerator/knn_hw_accel.c:9</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_9_1>
+                            <Name>VITIS_LOOP_9_1</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>src/hardware-accelerator/knn_hw_accel.c:9</SourceLocation>
+                        </VITIS_LOOP_9_1>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>731</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>332</UTIL_DSP>
+                    <FF>83224</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>78</UTIL_FF>
+                    <LUT>124768</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>234</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_9_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln9_fu_1374_p2" SOURCE="src/hardware-accelerator/knn_hw_accel.c:9" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U1" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U87" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U2" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U88" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U3" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U89" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U5" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U90" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U7" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U91" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U9" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U92" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U11" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U93" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U13" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U94" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U15" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U95" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U17" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U96" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U19" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U97" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_s"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U21" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U98" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U23" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U99" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U25" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U100" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U27" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_14"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U101" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U29" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_15"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U102" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_14"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U31" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_16"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U103" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_15"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U33" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_17"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U104" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_16"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U35" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_18"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U105" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_17"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U37" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_19"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U106" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_18"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U39" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_20"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U107" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_19"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U41" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_21"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U108" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_20"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U43" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_22"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U109" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_21"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U45" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_23"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U110" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_22"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U47" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_24"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U111" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_23"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U49" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_25"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U112" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_24"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U51" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_26"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U113" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_25"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U53" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_27"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U114" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_26"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U55" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_28"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U115" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_27"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U57" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_29"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U116" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_28"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U59" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_30"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U117" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_29"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U61" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_31"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U118" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_30"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U63" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_32"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U119" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_31"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U65" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_33"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U120" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_32"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U67" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_34"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U121" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_33"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U69" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_35"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U122" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_34"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U71" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_36"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U123" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_35"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U73" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_37"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U124" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_36"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U75" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_38"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U125" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_37"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U77" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_39"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U126" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_38"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U79" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_40"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U127" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_39"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U81" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_41"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U128" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_40"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dsub" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dsub" PRAGMA="" RTLNAME="dsub_64ns_64ns_64_7_full_dsp_1_U83" SOURCE="src/hardware-accelerator/knn_hw_accel.c:15" STORAGESUBTYPE="" URAM="0" VARIABLE="diff_42"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dmul" DSP="11" ID="" IMPL="maxdsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dmul" PRAGMA="" RTLNAME="dmul_64ns_64ns_64_7_max_dsp_1_U129" SOURCE="src/hardware-accelerator/knn_hw_accel.c:16" STORAGESUBTYPE="" URAM="0" VARIABLE="mul8_41"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U4" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U6" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U8" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U10" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U12" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U14" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U16" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U18" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U20" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U22" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U24" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U26" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U28" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U30" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U32" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_14"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U34" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_15"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U36" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_16"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U38" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_17"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U40" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_18"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U42" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_19"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U44" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_20"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U46" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_21"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U48" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_22"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U50" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_23"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U52" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_24"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U54" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_25"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U56" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_26"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U58" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_27"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U60" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_28"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U62" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_29"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U64" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_30"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U66" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_31"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U68" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_32"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U70" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_33"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U72" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_34"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U74" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_35"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U76" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_36"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U78" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_37"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U80" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_38"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U82" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_39"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U84" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_40"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U85" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_41"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op dadd" DSP="3" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_9_1" OPTYPE="dadd" PRAGMA="" RTLNAME="dadd_64ns_64ns_64_7_full_dsp_1_U86" SOURCE="src/hardware-accelerator/knn_hw_accel.c:22" STORAGESUBTYPE="" URAM="0" VARIABLE="distance_42"/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands/>
+    <Args>
+        <Arg ArgName="new_point" index="0" direction="in" srcType="" srcSize="2816">
+            <hwRefs>
+                <hwRef type="port" interface="new_point" name="new_point" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="points_features" index="1" direction="in" srcType="double*" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="points_features" name="points_features" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="dist_points_distances" index="2" direction="out" srcType="double*" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="dist_points_distances" name="dist_points_distances" usage="data" direction="out"/>
+                <hwRef type="port" interface="dist_points_distances_ap_vld" name="dist_points_distances_ap_vld" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+            <portMaps>
+                <portMap portMapName="ap_start">start</portMap>
+                <portMap portMapName="ap_done">done</portMap>
+                <portMap portMapName="ap_idle">idle</portMap>
+                <portMap portMapName="ap_ready">ready</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_done</port>
+                <port>ap_idle</port>
+                <port>ap_ready</port>
+                <port>ap_start</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="new_point" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="2816">
+            <portMaps>
+                <portMap portMapName="new_point">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>new_point</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="new_point"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="points_features" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="points_features">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>points_features</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="points_features"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="dist_points_distances" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="dist_points_distances">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>dist_points_distances</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="dist_points_distances"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="Other Ports">
+                <table>
+                    <keys size="4">Port, Mode, Direction, Bitwidth</keys>
+                    <column name="dist_points_distances">ap_vld, out, 64</column>
+                    <column name="new_point">ap_none, in, 2816</column>
+                    <column name="points_features">ap_none, in, 64</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table>
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst">reset, ap_rst</column>
+                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start</column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table>
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="new_point">in, </column>
+                    <column name="points_features">in, double*</column>
+                    <column name="dist_points_distances">out, double*</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table>
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="new_point">new_point, port</column>
+                    <column name="points_features">points_features, port</column>
+                    <column name="dist_points_distances">dist_points_distances, port</column>
+                    <column name="dist_points_distances">dist_points_distances_ap_vld, port</column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ResolutionUrl key="ZZZ">docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
+    <PragmaReport/>
+</profile>
+
