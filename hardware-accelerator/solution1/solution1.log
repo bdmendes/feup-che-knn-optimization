@@ -1,0 +1,1207 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: source ./hardware-accelerator/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k20.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k3.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'test.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'train.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 215.438 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/io.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/knn.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/hardware-accelerator/knn_hw_accel.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/preprocess.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/utils.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.75 seconds. CPU system time: 1.3 seconds. Elapsed time: 3.05 seconds; current allocated memory: 217.055 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 35 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 30 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 26 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 352 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 352 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 352 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_9_1> at src/hardware-accelerator/knn_hw_accel.c:9:21 
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_13_2' is marked as complete unroll implied by the pipeline pragma (src/hardware-accelerator/knn_hw_accel.c:13:26)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_13_2' (src/hardware-accelerator/knn_hw_accel.c:13:26) in function 'hw_get_eucledean_distances' completely with a factor of 43 (src/hardware-accelerator/knn_hw_accel.c:5:0)
+ERROR: [HLS 214-323] Address computation on scalar port 'new_point_features' is not supported (src/hardware-accelerator/knn_hw_accel.c:5:0)
+ERROR: [HLS 200-1715] Encountered problem during source synthesis
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4.05 seconds. CPU system time: 1.52 seconds. Elapsed time: 10.3 seconds; current allocated memory: 3.469 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./hardware-accelerator/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k20.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k3.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'test.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'train.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 215.191 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/io.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/knn.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/hardware-accelerator/knn_hw_accel.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/preprocess.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/utils.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.73 seconds. CPU system time: 1.45 seconds. Elapsed time: 3.18 seconds; current allocated memory: 217.035 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 35 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 30 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 26 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 352 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 352 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 352 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_9_1> at src/hardware-accelerator/knn_hw_accel.c:9:21 
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_13_2' is marked as complete unroll implied by the pipeline pragma (src/hardware-accelerator/knn_hw_accel.c:13:26)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_13_2' (src/hardware-accelerator/knn_hw_accel.c:13:26) in function 'hw_get_eucledean_distances' completely with a factor of 43 (src/hardware-accelerator/knn_hw_accel.c:5:0)
+ERROR: [HLS 214-323] Address computation on scalar port 'new_point_features' is not supported (src/hardware-accelerator/knn_hw_accel.c:5:0)
+ERROR: [HLS 200-1715] Encountered problem during source synthesis
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4.09 seconds. CPU system time: 1.75 seconds. Elapsed time: 10.57 seconds; current allocated memory: 3.770 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./hardware-accelerator/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name hw_get_eucledean_distances hw_get_eucledean_distances 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode m_axi hw_get_eucledean_distances dist_points_distances 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k20.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k3.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'test.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'train.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 215.184 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/io.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/knn.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/hardware-accelerator/knn_hw_accel.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/preprocess.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/utils.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.57 seconds. CPU system time: 1.42 seconds. Elapsed time: 3 seconds; current allocated memory: 217.195 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 36 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 31 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 28 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 29 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 28 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 355 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 355 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 355 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'dist_points_distances' for cosimulation. (src/hardware-accelerator/knn_hw_accel.c:5:0)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_9_1> at src/hardware-accelerator/knn_hw_accel.c:9:21 
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_13_2' is marked as complete unroll implied by the pipeline pragma (src/hardware-accelerator/knn_hw_accel.c:13:26)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_13_2' (src/hardware-accelerator/knn_hw_accel.c:13:26) in function 'hw_get_eucledean_distances' completely with a factor of 43 (src/hardware-accelerator/knn_hw_accel.c:5:0)
+ERROR: [HLS 214-323] Address computation on scalar port 'new_point_features' is not supported (src/hardware-accelerator/knn_hw_accel.c:5:0)
+ERROR: [HLS 200-1715] Encountered problem during source synthesis
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3.85 seconds. CPU system time: 1.67 seconds. Elapsed time: 10.28 seconds; current allocated memory: 4.145 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./hardware-accelerator/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name hw_get_eucledean_distances hw_get_eucledean_distances 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k20.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k3.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'test.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'train.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.06 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.08 seconds; current allocated memory: 215.191 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/io.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/knn.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/hardware-accelerator/knn_hw_accel.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/preprocess.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/utils.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.68 seconds. CPU system time: 1.34 seconds. Elapsed time: 3.02 seconds; current allocated memory: 217.062 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 35 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 30 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 26 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 352 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 352 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 352 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_9_1> at src/hardware-accelerator/knn_hw_accel.c:9:21 
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_13_2' is marked as complete unroll implied by the pipeline pragma (src/hardware-accelerator/knn_hw_accel.c:13:26)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_13_2' (src/hardware-accelerator/knn_hw_accel.c:13:26) in function 'hw_get_eucledean_distances' completely with a factor of 43 (src/hardware-accelerator/knn_hw_accel.c:5:0)
+ERROR: [HLS 214-323] Address computation on scalar port 'new_point_features' is not supported (src/hardware-accelerator/knn_hw_accel.c:5:0)
+ERROR: [HLS 200-1715] Encountered problem during source synthesis
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3.91 seconds. CPU system time: 1.59 seconds. Elapsed time: 10.25 seconds; current allocated memory: 3.781 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./hardware-accelerator/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name hw_get_eucledean_distances hw_get_eucledean_distances 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k20.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k3.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'test.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'train.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.09 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.1 seconds; current allocated memory: 215.191 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/io.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/knn.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/hardware-accelerator/knn_hw_accel.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/preprocess.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/utils.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.79 seconds. CPU system time: 1.4 seconds. Elapsed time: 3.21 seconds; current allocated memory: 217.062 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 35 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 30 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 26 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 25 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 352 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 352 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 352 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_9_1> at src/hardware-accelerator/knn_hw_accel.c:9:21 
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_13_2' is marked as complete unroll implied by the pipeline pragma (src/hardware-accelerator/knn_hw_accel.c:13:26)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_13_2' (src/hardware-accelerator/knn_hw_accel.c:13:26) in function 'hw_get_eucledean_distances' completely with a factor of 43 (src/hardware-accelerator/knn_hw_accel.c:5:0)
+ERROR: [HLS 214-323] Address computation on scalar port 'new_point_features' is not supported (src/hardware-accelerator/knn_hw_accel.c:5:0)
+ERROR: [HLS 200-1715] Encountered problem during source synthesis
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4.07 seconds. CPU system time: 1.69 seconds. Elapsed time: 10.52 seconds; current allocated memory: 3.781 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./hardware-accelerator/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name hw_get_eucledean_distances hw_get_eucledean_distances 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode m_axi hw_get_eucledean_distances new_point_features 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k20.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k3.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'test.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'train.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 215.191 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/io.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/knn.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/hardware-accelerator/knn_hw_accel.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/preprocess.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/utils.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.63 seconds. CPU system time: 1.39 seconds. Elapsed time: 3 seconds; current allocated memory: 217.203 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 36 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 31 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 28 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 29 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 28 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 314 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 314 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 314 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 321 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 325 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'new_point_features' for cosimulation. (src/hardware-accelerator/knn_hw_accel.c:5:0)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_9_1> at src/hardware-accelerator/knn_hw_accel.c:9:21 
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_13_2' is marked as complete unroll implied by the pipeline pragma (src/hardware-accelerator/knn_hw_accel.c:13:26)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_13_2' (src/hardware-accelerator/knn_hw_accel.c:13:26) in function 'hw_get_eucledean_distances' completely with a factor of 43 (src/hardware-accelerator/knn_hw_accel.c:5:0)
+INFO: [HLS 214-115] Multiple burst reads of length 43 and bit width 64 has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/hardware-accelerator/knn_hw_accel.c:13:26)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.12 seconds. CPU system time: 0.26 seconds. Elapsed time: 7.1 seconds; current allocated memory: 219.363 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 219.363 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 220.055 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 220.066 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 242.480 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 242.480 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'hw_get_eucledean_distances' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hw_get_eucledean_distances' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_9_1'.
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 39, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 41, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 42, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 43, Depth = 325, loop 'VITIS_LOOP_9_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.27 seconds; current allocated memory: 242.480 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 242.480 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hw_get_eucledean_distances' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/new_point_features' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/dist_points_distances' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'hw_get_eucledean_distances' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'new_point_features' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_7_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_7_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hw_get_eucledean_distances'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 243.969 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.28 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.3 seconds; current allocated memory: 251.559 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.36 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.39 seconds; current allocated memory: 264.922 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for hw_get_eucledean_distances.
+INFO: [VLOG 209-307] Generating Verilog RTL for hw_get_eucledean_distances.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 105.39 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 5.1 seconds. CPU system time: 1.74 seconds. Elapsed time: 11.53 seconds; current allocated memory: 49.730 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./hardware-accelerator/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name hw_get_eucledean_distances hw_get_eucledean_distances 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode m_axi hw_get_eucledean_distances new_point_features 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k20.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k3.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'test.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'train.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 215.184 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/io.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/knn.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/hardware-accelerator/knn_hw_accel.c' ... 
+ERROR: [HLS 207-1213] expected ';' after expression (src/hardware-accelerator/knn_hw_accel.c:22:30)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0.83 seconds. CPU system time: 0.63 seconds. Elapsed time: 1.47 seconds; current allocated memory: 1.410 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./hardware-accelerator/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name hw_get_eucledean_distances hw_get_eucledean_distances 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode m_axi hw_get_eucledean_distances new_point_features 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k20.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k3.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'test.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'train.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 215.184 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/io.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/knn.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/hardware-accelerator/knn_hw_accel.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/preprocess.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/utils.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.63 seconds. CPU system time: 1.37 seconds. Elapsed time: 3.02 seconds; current allocated memory: 217.195 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 47 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 40 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 40 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 41 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 41 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 41 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 41 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 448 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 448 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 448 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 455 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 455 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'new_point_features' for cosimulation. (src/hardware-accelerator/knn_hw_accel.c:5:0)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_9_1> at src/hardware-accelerator/knn_hw_accel.c:9:21 
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_13_2' is marked as complete unroll implied by the pipeline pragma (src/hardware-accelerator/knn_hw_accel.c:13:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_21_3' is marked as complete unroll implied by the pipeline pragma (src/hardware-accelerator/knn_hw_accel.c:21:26)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_13_2' (src/hardware-accelerator/knn_hw_accel.c:13:26) in function 'hw_get_eucledean_distances' completely with a factor of 43 (src/hardware-accelerator/knn_hw_accel.c:5:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_21_3' (src/hardware-accelerator/knn_hw_accel.c:21:26) in function 'hw_get_eucledean_distances' completely with a factor of 43 (src/hardware-accelerator/knn_hw_accel.c:5:0)
+INFO: [HLS 214-115] Multiple burst reads of length 43 and bit width 64 has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/hardware-accelerator/knn_hw_accel.c:13:26)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.14 seconds. CPU system time: 0.29 seconds. Elapsed time: 7.08 seconds; current allocated memory: 219.383 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 219.383 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 220.215 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 220.273 MB.
+INFO: [XFORM 203-102] Partitioning array 'diffs' (src/hardware-accelerator/knn_hw_accel.c:10) automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 242.906 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 242.906 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'hw_get_eucledean_distances' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hw_get_eucledean_distances' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_9_1'.
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 39, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 41, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 42, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 43, Depth = 325, loop 'VITIS_LOOP_9_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.3 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.31 seconds; current allocated memory: 242.906 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 242.906 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hw_get_eucledean_distances' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/new_point_features' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/dist_points_distances' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'hw_get_eucledean_distances' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'new_point_features' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_7_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dsub_64ns_64ns_64_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hw_get_eucledean_distances'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 243.648 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.27 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.29 seconds; current allocated memory: 251.352 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.36 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.39 seconds; current allocated memory: 264.543 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for hw_get_eucledean_distances.
+INFO: [VLOG 209-307] Generating Verilog RTL for hw_get_eucledean_distances.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 105.39 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 5.16 seconds. CPU system time: 1.76 seconds. Elapsed time: 11.59 seconds; current allocated memory: 49.359 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./hardware-accelerator/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name hw_get_eucledean_distances hw_get_eucledean_distances 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode m_axi hw_get_eucledean_distances new_point_features 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type complete hw_get_eucledean_distances new_point_features 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type complete hw_get_eucledean_distances points_features 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k20.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k3.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'test.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'train.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 215.191 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/io.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/knn.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/hardware-accelerator/knn_hw_accel.c' ... 
+WARNING: [HLS 207-5539] 'factor' in '#pragma HLS array_partition' is ignored (/home/sirze/repos/CHE/hardware-accelerator/solution1/directives.tcl:10:60)
+WARNING: [HLS 207-5539] 'factor' in '#pragma HLS array_partition' is ignored (/home/sirze/repos/CHE/hardware-accelerator/solution1/directives.tcl:9:60)
+INFO: [HLS 200-10] Analyzing design file 'src/preprocess.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/utils.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.65 seconds. CPU system time: 1.41 seconds. Elapsed time: 3.07 seconds; current allocated memory: 217.281 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 58 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 47 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 40 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 40 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 41 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 41 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 41 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 41 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 448 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 448 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 448 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 455 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 455 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'new_point_features' for cosimulation. (src/hardware-accelerator/knn_hw_accel.c:5:0)
+WARNING: [HLS 214-253] Ignored unsupported array_partition pragma on variable 'points_features'. This can happen when applying a pragma on a function argument with mismatched array size w.r.t. its call site, or when providing a dim too deep on an array of insufficient dimension. (/home/sirze/repos/CHE/hardware-accelerator/solution1/directives.tcl:10:9)
+WARNING: [HLS 214-253] Ignored unsupported array_partition pragma on variable 'new_point_features'. This can happen when applying a pragma on a function argument with mismatched array size w.r.t. its call site, or when providing a dim too deep on an array of insufficient dimension. (/home/sirze/repos/CHE/hardware-accelerator/solution1/directives.tcl:9:9)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_9_1> at src/hardware-accelerator/knn_hw_accel.c:9:21 
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_13_2' is marked as complete unroll implied by the pipeline pragma (src/hardware-accelerator/knn_hw_accel.c:13:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_21_3' is marked as complete unroll implied by the pipeline pragma (src/hardware-accelerator/knn_hw_accel.c:21:26)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_13_2' (src/hardware-accelerator/knn_hw_accel.c:13:26) in function 'hw_get_eucledean_distances' completely with a factor of 43 (src/hardware-accelerator/knn_hw_accel.c:5:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_21_3' (src/hardware-accelerator/knn_hw_accel.c:21:26) in function 'hw_get_eucledean_distances' completely with a factor of 43 (src/hardware-accelerator/knn_hw_accel.c:5:0)
+INFO: [HLS 214-115] Multiple burst reads of length 43 and bit width 64 has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/hardware-accelerator/knn_hw_accel.c:13:26)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.12 seconds. CPU system time: 0.3 seconds. Elapsed time: 7.09 seconds; current allocated memory: 219.547 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 219.547 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 220.395 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 220.453 MB.
+INFO: [XFORM 203-102] Partitioning array 'diffs' (src/hardware-accelerator/knn_hw_accel.c:10) automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 242.824 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 242.824 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'hw_get_eucledean_distances' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hw_get_eucledean_distances' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_9_1'.
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 39, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 41, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 42, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 43, Depth = 325, loop 'VITIS_LOOP_9_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.27 seconds; current allocated memory: 242.824 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 242.824 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hw_get_eucledean_distances' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/new_point_features' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/dist_points_distances' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'hw_get_eucledean_distances' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'new_point_features' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_7_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dsub_64ns_64ns_64_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hw_get_eucledean_distances'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 243.789 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.27 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.28 seconds; current allocated memory: 251.465 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.37 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.41 seconds; current allocated memory: 264.742 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for hw_get_eucledean_distances.
+INFO: [VLOG 209-307] Generating Verilog RTL for hw_get_eucledean_distances.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 105.39 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 5.11 seconds. CPU system time: 1.8 seconds. Elapsed time: 11.59 seconds; current allocated memory: 49.551 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./hardware-accelerator/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name hw_get_eucledean_distances hw_get_eucledean_distances 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type complete -dim 1 -factor 16 hw_get_eucledean_distances new_point_features 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type complete -dim 1 -factor 16 hw_get_eucledean_distances points_features 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k20.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k3.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'test.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'train.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 215.191 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/io.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/knn.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/hardware-accelerator/knn_hw_accel.c' ... 
+WARNING: [HLS 207-5539] 'factor' in '#pragma HLS array_partition' is ignored (/home/sirze/repos/CHE/hardware-accelerator/solution1/directives.tcl:8:60)
+WARNING: [HLS 207-5539] 'factor' in '#pragma HLS array_partition' is ignored (/home/sirze/repos/CHE/hardware-accelerator/solution1/directives.tcl:9:60)
+INFO: [HLS 200-10] Analyzing design file 'src/preprocess.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/utils.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.77 seconds. CPU system time: 1.32 seconds. Elapsed time: 3.11 seconds; current allocated memory: 217.234 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 46 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 41 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 38 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 38 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 39 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 39 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 39 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 39 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 40 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 39 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 357 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 357 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 357 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+WARNING: [HLS 214-253] Ignored unsupported array_partition pragma on variable 'points_features'. This can happen when applying a pragma on a function argument with mismatched array size w.r.t. its call site, or when providing a dim too deep on an array of insufficient dimension. (/home/sirze/repos/CHE/hardware-accelerator/solution1/directives.tcl:9:9)
+WARNING: [HLS 214-253] Ignored unsupported array_partition pragma on variable 'new_point_features'. This can happen when applying a pragma on a function argument with mismatched array size w.r.t. its call site, or when providing a dim too deep on an array of insufficient dimension. (/home/sirze/repos/CHE/hardware-accelerator/solution1/directives.tcl:8:9)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_9_1> at src/hardware-accelerator/knn_hw_accel.c:9:21 
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_13_2' is marked as complete unroll implied by the pipeline pragma (src/hardware-accelerator/knn_hw_accel.c:13:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_21_3' is marked as complete unroll implied by the pipeline pragma (src/hardware-accelerator/knn_hw_accel.c:21:26)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_13_2' (src/hardware-accelerator/knn_hw_accel.c:13:26) in function 'hw_get_eucledean_distances' completely with a factor of 43 (src/hardware-accelerator/knn_hw_accel.c:5:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_21_3' (src/hardware-accelerator/knn_hw_accel.c:21:26) in function 'hw_get_eucledean_distances' completely with a factor of 43 (src/hardware-accelerator/knn_hw_accel.c:5:0)
+ERROR: [HLS 214-323] Address computation on scalar port 'new_point_features' is not supported (src/hardware-accelerator/knn_hw_accel.c:5:0)
+ERROR: [HLS 200-1715] Encountered problem during source synthesis
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4.18 seconds. CPU system time: 1.58 seconds. Elapsed time: 10.5 seconds; current allocated memory: 3.988 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./hardware-accelerator/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name hw_get_eucledean_distances hw_get_eucledean_distances 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type complete -dim 1 -factor 16 hw_get_eucledean_distances new_point_features 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type complete -dim 1 -factor 16 hw_get_eucledean_distances points_features 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k20.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k3.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'test.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'train.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 215.191 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/io.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/knn.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/hardware-accelerator/knn_hw_accel.c' ... 
+WARNING: [HLS 207-5539] 'factor' in '#pragma HLS array_partition' is ignored (/home/sirze/repos/CHE/hardware-accelerator/solution1/directives.tcl:8:60)
+WARNING: [HLS 207-5539] 'factor' in '#pragma HLS array_partition' is ignored (/home/sirze/repos/CHE/hardware-accelerator/solution1/directives.tcl:9:60)
+INFO: [HLS 200-10] Analyzing design file 'src/preprocess.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/utils.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.66 seconds. CPU system time: 1.44 seconds. Elapsed time: 3.11 seconds; current allocated memory: 217.234 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 57 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 46 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 41 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 38 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 38 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 39 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 39 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 39 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 39 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 40 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 39 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 357 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 357 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 357 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+WARNING: [HLS 214-253] Ignored unsupported array_partition pragma on variable 'points_features'. This can happen when applying a pragma on a function argument with mismatched array size w.r.t. its call site, or when providing a dim too deep on an array of insufficient dimension. (/home/sirze/repos/CHE/hardware-accelerator/solution1/directives.tcl:9:9)
+WARNING: [HLS 214-253] Ignored unsupported array_partition pragma on variable 'new_point_features'. This can happen when applying a pragma on a function argument with mismatched array size w.r.t. its call site, or when providing a dim too deep on an array of insufficient dimension. (/home/sirze/repos/CHE/hardware-accelerator/solution1/directives.tcl:8:9)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_9_1> at src/hardware-accelerator/knn_hw_accel.c:9:21 
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_13_2' is marked as complete unroll implied by the pipeline pragma (src/hardware-accelerator/knn_hw_accel.c:13:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_21_3' is marked as complete unroll implied by the pipeline pragma (src/hardware-accelerator/knn_hw_accel.c:21:26)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_13_2' (src/hardware-accelerator/knn_hw_accel.c:13:26) in function 'hw_get_eucledean_distances' completely with a factor of 43 (src/hardware-accelerator/knn_hw_accel.c:5:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_21_3' (src/hardware-accelerator/knn_hw_accel.c:21:26) in function 'hw_get_eucledean_distances' completely with a factor of 43 (src/hardware-accelerator/knn_hw_accel.c:5:0)
+ERROR: [HLS 214-323] Address computation on scalar port 'new_point_features' is not supported (src/hardware-accelerator/knn_hw_accel.c:5:0)
+ERROR: [HLS 200-1715] Encountered problem during source synthesis
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4.02 seconds. CPU system time: 1.66 seconds. Elapsed time: 10.41 seconds; current allocated memory: 3.988 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./hardware-accelerator/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name hw_get_eucledean_distances hw_get_eucledean_distances 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type block hw_get_eucledean_distances new_point_features 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 2 -factor 16 -type block hw_get_eucledean_distances points_features 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode m_axi hw_get_eucledean_distances new_point_features 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k20.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k3.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'test.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'train.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 215.191 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/io.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/knn.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/hardware-accelerator/knn_hw_accel.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/preprocess.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/utils.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.69 seconds. CPU system time: 1.4 seconds. Elapsed time: 3.1 seconds; current allocated memory: 217.266 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 58 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 47 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 40 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 40 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 121 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 105 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 105 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 105 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 106 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 105 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 368 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 368 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 368 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 522 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 527 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'new_point_features' for cosimulation. (src/hardware-accelerator/knn_hw_accel.c:5:0)
+WARNING: [HLS 214-253] Ignored unsupported array_partition pragma on variable 'points_features'. This can happen when applying a pragma on a function argument with mismatched array size w.r.t. its call site, or when providing a dim too deep on an array of insufficient dimension. (/home/sirze/repos/CHE/hardware-accelerator/solution1/directives.tcl:9:9)
+INFO: [HLS 214-248] Applying array_partition to 'new_point_features': Block partitioning with factor 16 on dimension 1. (src/hardware-accelerator/knn_hw_accel.c:5:0)
+WARNING: [HLS 214-167] The program may have out of bound array access (src/hardware-accelerator/knn_hw_accel.c:15:41)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_9_1> at src/hardware-accelerator/knn_hw_accel.c:9:21 
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_13_2' is marked as complete unroll implied by the pipeline pragma (src/hardware-accelerator/knn_hw_accel.c:13:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_21_3' is marked as complete unroll implied by the pipeline pragma (src/hardware-accelerator/knn_hw_accel.c:21:26)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_13_2' (src/hardware-accelerator/knn_hw_accel.c:13:26) in function 'hw_get_eucledean_distances' completely with a factor of 43 (src/hardware-accelerator/knn_hw_accel.c:5:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_21_3' (src/hardware-accelerator/knn_hw_accel.c:21:26) in function 'hw_get_eucledean_distances' completely with a factor of 43 (src/hardware-accelerator/knn_hw_accel.c:5:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.3 seconds. CPU system time: 0.31 seconds. Elapsed time: 7.19 seconds; current allocated memory: 219.840 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 219.840 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 220.742 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 220.891 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 245.492 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 245.492 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'hw_get_eucledean_distances' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hw_get_eucledean_distances' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_9_1'.
+WARNING: [HLS 200-885] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to schedule bus request operation ('gmem_0_load_1_req', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem_0' (src/hardware-accelerator/knn_hw_accel.c:15) due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array.
+WARNING: [HLS 200-885] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to schedule 'load' operation 64 bit ('points_features_load_3', src/hardware-accelerator/knn_hw_accel.c:15) on array 'points_features' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'points_features'.
+WARNING: [HLS 200-885] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to schedule 'load' operation 64 bit ('points_features_load_5', src/hardware-accelerator/knn_hw_accel.c:15) on array 'points_features' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'points_features'.
+WARNING: [HLS 200-885] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to schedule 'load' operation 64 bit ('points_features_load_7', src/hardware-accelerator/knn_hw_accel.c:15) on array 'points_features' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'points_features'.
+WARNING: [HLS 200-885] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to schedule 'load' operation 64 bit ('points_features_load_21', src/hardware-accelerator/knn_hw_accel.c:15) on array 'points_features' due to limited memory ports (II = 11). Please consider using a memory core with more ports or partitioning the array 'points_features'.
+WARNING: [HLS 200-885] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to schedule 'load' operation 64 bit ('points_features_load_29', src/hardware-accelerator/knn_hw_accel.c:15) on array 'points_features' due to limited memory ports (II = 15). Please consider using a memory core with more ports or partitioning the array 'points_features'.
+WARNING: [HLS 200-885] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to schedule 'load' operation 64 bit ('points_features_load_31', src/hardware-accelerator/knn_hw_accel.c:15) on array 'points_features' due to limited memory ports (II = 16). Please consider using a memory core with more ports or partitioning the array 'points_features'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 17, Depth = 455, loop 'VITIS_LOOP_9_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.09 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.11 seconds; current allocated memory: 245.492 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.25 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 246.762 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hw_get_eucledean_distances' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/gmem_0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/gmem_1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/gmem_2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/gmem_3' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/gmem_4' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/gmem_5' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/gmem_6' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/gmem_7' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/gmem_8' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/gmem_9' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/gmem_10' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/gmem_11' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/gmem_12' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/gmem_13' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/gmem_14' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/gmem_15' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/new_point_features_0' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/new_point_features_1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/new_point_features_2' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/new_point_features_3' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/new_point_features_4' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/new_point_features_5' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/new_point_features_6' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/new_point_features_7' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/new_point_features_8' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/new_point_features_9' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/new_point_features_10' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/new_point_features_11' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/new_point_features_12' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/new_point_features_13' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/new_point_features_14' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/new_point_features_15' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/dist_points_distances' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'hw_get_eucledean_distances' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'new_point_features_0', 'new_point_features_1', 'new_point_features_2', 'new_point_features_3', 'new_point_features_4', 'new_point_features_5', 'new_point_features_6', 'new_point_features_7', 'new_point_features_8', 'new_point_features_9', 'new_point_features_10', 'new_point_features_11', 'new_point_features_12', 'new_point_features_13', 'new_point_features_14' and 'new_point_features_15' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_7_full_dsp_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_7_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hw_get_eucledean_distances'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.3 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.32 seconds; current allocated memory: 257.723 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.52 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.58 seconds; current allocated memory: 274.562 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 5.78 seconds. CPU system time: 0.03 seconds. Elapsed time: 5.81 seconds; current allocated memory: 301.750 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for hw_get_eucledean_distances.
+INFO: [VLOG 209-307] Generating Verilog RTL for hw_get_eucledean_distances.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 118.14 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 12.23 seconds. CPU system time: 1.86 seconds. Elapsed time: 18.68 seconds; current allocated memory: 86.559 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./hardware-accelerator/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name hw_get_eucledean_distances hw_get_eucledean_distances 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 2 -factor 16 -type block hw_get_eucledean_distances new_point_features 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type block hw_get_eucledean_distances points_features 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode m_axi hw_get_eucledean_distances new_point_features 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k20.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k3.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'test.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'train.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 215.191 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/io.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/knn.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/hardware-accelerator/knn_hw_accel.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/preprocess.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/utils.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.8 seconds. CPU system time: 1.27 seconds. Elapsed time: 3.08 seconds; current allocated memory: 217.266 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 58 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 47 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 42 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 40 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 40 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 76 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 76 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 76 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 76 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 79 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 77 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,533 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,533 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,533 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,301 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,301 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'new_point_features' for cosimulation. (src/hardware-accelerator/knn_hw_accel.c:5:0)
+WARNING: [HLS 214-253] Ignored unsupported array_partition pragma on variable 'new_point_features'. This can happen when applying a pragma on a function argument with mismatched array size w.r.t. its call site, or when providing a dim too deep on an array of insufficient dimension. (/home/sirze/repos/CHE/hardware-accelerator/solution1/directives.tcl:8:9)
+INFO: [HLS 214-248] Applying array_partition to 'points_features': Block partitioning with factor 16 on dimension 1. (src/hardware-accelerator/knn_hw_accel.c:5:0)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_9_1> at src/hardware-accelerator/knn_hw_accel.c:9:21 
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_13_2' is marked as complete unroll implied by the pipeline pragma (src/hardware-accelerator/knn_hw_accel.c:13:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_21_3' is marked as complete unroll implied by the pipeline pragma (src/hardware-accelerator/knn_hw_accel.c:21:26)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_13_2' (src/hardware-accelerator/knn_hw_accel.c:13:26) in function 'hw_get_eucledean_distances' completely with a factor of 43 (src/hardware-accelerator/knn_hw_accel.c:5:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_21_3' (src/hardware-accelerator/knn_hw_accel.c:21:26) in function 'hw_get_eucledean_distances' completely with a factor of 43 (src/hardware-accelerator/knn_hw_accel.c:5:0)
+INFO: [HLS 214-115] Multiple burst reads of length 43 and bit width 64 has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/hardware-accelerator/knn_hw_accel.c:13:26)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.49 seconds. CPU system time: 0.28 seconds. Elapsed time: 7.09 seconds; current allocated memory: 219.520 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 219.520 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 223.598 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 223.598 MB.
+INFO: [XFORM 203-102] Partitioning array 'diffs' (src/hardware-accelerator/knn_hw_accel.c:10) automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.61 seconds. CPU system time: 0 seconds. Elapsed time: 0.61 seconds; current allocated memory: 250.215 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 250.215 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'hw_get_eucledean_distances' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hw_get_eucledean_distances' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_9_1'.
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 39, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 41, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+WARNING: [HLS 200-880] The II Violation in module 'hw_get_eucledean_distances' (loop 'VITIS_LOOP_9_1'): Unable to enforce a carried dependence constraint (II = 42, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_42', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15) and bus read operation ('gmem_addr_read', src/hardware-accelerator/knn_hw_accel.c:15) on port 'gmem' (src/hardware-accelerator/knn_hw_accel.c:15).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 43, Depth = 325, loop 'VITIS_LOOP_9_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.29 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.3 seconds; current allocated memory: 270.809 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.42 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.43 seconds; current allocated memory: 270.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hw_get_eucledean_distances' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/new_point_features' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/dist_points_distances' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'hw_get_eucledean_distances' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'new_point_features' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_7_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dsub_64ns_64ns_64_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_33_4_64_1_1': 33 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hw_get_eucledean_distances'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.47 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.49 seconds; current allocated memory: 283.395 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.6 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.63 seconds; current allocated memory: 305.230 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.24 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.25 seconds; current allocated memory: 321.191 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for hw_get_eucledean_distances.
+INFO: [VLOG 209-307] Generating Verilog RTL for hw_get_eucledean_distances.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 105.39 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 9.27 seconds. CPU system time: 1.65 seconds. Elapsed time: 15.26 seconds; current allocated memory: 106.000 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./hardware-accelerator/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name hw_get_eucledean_distances hw_get_eucledean_distances 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 2 -factor 16 -type block hw_get_eucledean_distances new_point_features 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type block hw_get_eucledean_distances points_features 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode m_axi hw_get_eucledean_distances new_point_features 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k20.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k3.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'test.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'train.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 215.191 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/io.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/knn.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/hardware-accelerator/knn_hw_accel.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/preprocess.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/utils.c' ... 
+WARNING: [HLS 200-1986] Could not apply ARRAY_PARTITION directive, invalid function, label, or variable (/home/sirze/repos/CHE/hardware-accelerator/solution1/directives.tcl:8)
+WARNING: [HLS 200-1986] Could not apply INTERFACE directive, invalid function, label, or variable (/home/sirze/repos/CHE/hardware-accelerator/solution1/directives.tcl:10)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.79 seconds. CPU system time: 1.37 seconds. Elapsed time: 3.16 seconds; current allocated memory: 217.250 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 59 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 176 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 171 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 168 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 168 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 203 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 203 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 203 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 203 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 204 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 203 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 489 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 613 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 613 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 509 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 514 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-248] Applying array_partition to 'points_features': Block partitioning with factor 16 on dimension 1. (src/hardware-accelerator/knn_hw_accel.c:5:0)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_9_1> at src/hardware-accelerator/knn_hw_accel.c:9:21 
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_13_2' is marked as complete unroll implied by the pipeline pragma (src/hardware-accelerator/knn_hw_accel.c:13:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_21_3' is marked as complete unroll implied by the pipeline pragma (src/hardware-accelerator/knn_hw_accel.c:21:26)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_13_2' (src/hardware-accelerator/knn_hw_accel.c:13:26) in function 'hw_get_eucledean_distances' completely with a factor of 43 (src/hardware-accelerator/knn_hw_accel.c:5:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_21_3' (src/hardware-accelerator/knn_hw_accel.c:21:26) in function 'hw_get_eucledean_distances' completely with a factor of 43 (src/hardware-accelerator/knn_hw_accel.c:5:0)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'diffs' due to pipeline pragma (src/hardware-accelerator/knn_hw_accel.c:10:16)
+INFO: [HLS 214-248] Applying array_partition to 'diffs': Complete partitioning on dimension 1. (src/hardware-accelerator/knn_hw_accel.c:10:16)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.42 seconds. CPU system time: 0.31 seconds. Elapsed time: 7.26 seconds; current allocated memory: 219.582 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 219.582 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 220.512 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 220.770 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 246.277 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 246.277 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'hw_get_eucledean_distances' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hw_get_eucledean_distances' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_9_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 317, loop 'VITIS_LOOP_9_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.39 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.43 seconds; current allocated memory: 261.918 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 263.484 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hw_get_eucledean_distances' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/new_point' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/dist_points_distances' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'hw_get_eucledean_distances' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'hw_get_eucledean_distances' pipeline 'VITIS_LOOP_9_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'hw_get_eucledean_distances' is 436507 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_7_full_dsp_1': 43 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_7_max_dsp_1': 43 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dsub_64ns_64ns_64_7_full_dsp_1': 43 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_33_4_64_1_1': 32 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hw_get_eucledean_distances'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.85 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.88 seconds; current allocated memory: 294.910 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.83 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.86 seconds; current allocated memory: 307.207 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.06 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.08 seconds; current allocated memory: 320.664 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for hw_get_eucledean_distances.
+INFO: [VLOG 209-307] Generating Verilog RTL for hw_get_eucledean_distances.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 137.04 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 7.91 seconds. CPU system time: 1.84 seconds. Elapsed time: 14.28 seconds; current allocated memory: 105.473 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./hardware-accelerator/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name hw_get_eucledean_distances hw_get_eucledean_distances 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 2 -factor 16 -type block hw_get_eucledean_distances new_point_features 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -factor 16 -type block hw_get_eucledean_distances points_features 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode m_axi hw_get_eucledean_distances new_point_features 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 26.29 seconds. CPU system time: 1.39 seconds. Elapsed time: 26.41 seconds; current allocated memory: 0.000 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./hardware-accelerator/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name hw_get_eucledean_distances hw_get_eucledean_distances 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k20.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'key-READ1-k3.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'test.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'train.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.07 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.08 seconds; current allocated memory: 215.191 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/io.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/knn.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/hardware-accelerator/knn_hw_accel.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/preprocess.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/timer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'src/utils.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.63 seconds. CPU system time: 1.44 seconds. Elapsed time: 3.08 seconds; current allocated memory: 217.047 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 58 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 176 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 171 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 168 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 168 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 169 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 169 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 169 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 169 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 170 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 169 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 315 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 315 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 315 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 231 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 236 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/sirze/repos/CHE/hardware-accelerator/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_9_1> at src/hardware-accelerator/knn_hw_accel.c:9:21 
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_13_2' is marked as complete unroll implied by the pipeline pragma (src/hardware-accelerator/knn_hw_accel.c:13:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_21_3' is marked as complete unroll implied by the pipeline pragma (src/hardware-accelerator/knn_hw_accel.c:21:26)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_13_2' (src/hardware-accelerator/knn_hw_accel.c:13:26) in function 'hw_get_eucledean_distances' completely with a factor of 43 (src/hardware-accelerator/knn_hw_accel.c:5:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_21_3' (src/hardware-accelerator/knn_hw_accel.c:21:26) in function 'hw_get_eucledean_distances' completely with a factor of 43 (src/hardware-accelerator/knn_hw_accel.c:5:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.14 seconds. CPU system time: 0.26 seconds. Elapsed time: 7.07 seconds; current allocated memory: 219.102 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 219.102 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 219.758 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 219.973 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 244.445 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 244.445 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'hw_get_eucledean_distances' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'hw_get_eucledean_distances' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_9_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 315, loop 'VITIS_LOOP_9_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 244.445 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 244.445 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hw_get_eucledean_distances' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/new_point' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/points_features' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'hw_get_eucledean_distances/dist_points_distances' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'hw_get_eucledean_distances' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'hw_get_eucledean_distances' pipeline 'VITIS_LOOP_9_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'hw_get_eucledean_distances' is 426359 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_7_full_dsp_1': 43 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_7_max_dsp_1': 43 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dsub_64ns_64ns_64_7_full_dsp_1': 43 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hw_get_eucledean_distances'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.45 seconds. CPU system time: 0 seconds. Elapsed time: 0.46 seconds; current allocated memory: 269.895 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.52 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.53 seconds; current allocated memory: 277.965 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 287.965 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for hw_get_eucledean_distances.
+INFO: [VLOG 209-307] Generating Verilog RTL for hw_get_eucledean_distances.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 137.04 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 5.34 seconds. CPU system time: 1.78 seconds. Elapsed time: 11.8 seconds; current allocated memory: 72.852 MB.

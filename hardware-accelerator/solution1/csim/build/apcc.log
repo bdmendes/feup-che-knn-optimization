@@ -1,0 +1,7 @@
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'sirze' on host 'thickerpad-solid' (Linux_x86_64 version 5.15.0-91-generic) on Fri Jan 05 16:40:57 WET 2024
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/sirze/repos/CHE/hardware-accelerator/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /home/sirze/repos/CHE/hardware-accelerator/solution1/csim/build/apcc_db_sirze/408671704472857330220
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 1.82 seconds. Total CPU system time: 0.16 seconds. Total elapsed time: 1.82 seconds; peak allocated memory: 99.641 MB.

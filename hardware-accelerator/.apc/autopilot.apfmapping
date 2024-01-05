@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="io.c" path="/home/sirze/repos/CHE/src/io.c"/>
+    <originFiles name="io.h" path="/home/sirze/repos/CHE/src/io.h"/>
+    <originFiles name="key-READ1-k20.dat" path="/home/sirze/repos/CHE/src/key-READ1-k20.dat"/>
+    <originFiles name="key-READ1-k3.dat" path="/home/sirze/repos/CHE/src/key-READ1-k3.dat"/>
+    <originFiles name="knn.c" path="/home/sirze/repos/CHE/src/knn.c"/>
+    <originFiles name="knn.h" path="/home/sirze/repos/CHE/src/knn.h"/>
+    <originFiles name="knn_hw_accel.c" path="/home/sirze/repos/CHE/src/hardware-accelerator/knn_hw_accel.c"/>
+    <originFiles name="params.h" path="/home/sirze/repos/CHE/src/params.h"/>
+    <originFiles name="preprocess.c" path="/home/sirze/repos/CHE/src/preprocess.c"/>
+    <originFiles name="preprocess.h" path="/home/sirze/repos/CHE/src/preprocess.h"/>
+    <originFiles name="test.dat" path="/home/sirze/repos/CHE/src/test.dat"/>
+    <originFiles name="timer.c" path="/home/sirze/repos/CHE/src/timer.c"/>
+    <originFiles name="timer.h" path="/home/sirze/repos/CHE/src/timer.h"/>
+    <originFiles name="train.dat" path="/home/sirze/repos/CHE/src/train.dat"/>
+    <originFiles name="types.h" path="/home/sirze/repos/CHE/src/types.h"/>
+    <originFiles name="utils.c" path="/home/sirze/repos/CHE/src/utils.c"/>
+    <originFiles name="utils.h" path="/home/sirze/repos/CHE/src/utils.h"/>
+    <originFiles name="knn_hw_accel.c" path="/home/sirze/repos/CHE/src/hardware-accelerator/knn_hw_accel.c"/>
+  </source>
+  <testbench>
+    <originFiles name="hw_testbench.c" path="/home/sirze/repos/CHE/src/hardware-accelerator/hw_testbench.c"/>
+    <originFiles name="hardware-accelerator" path="/home/sirze/repos/CHE/src/hardware-accelerator"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

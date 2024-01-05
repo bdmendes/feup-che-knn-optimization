@@ -8,4 +8,5 @@ analysis*.txt
 vscode/
 *analysis.txt
 .vscode/
+vitis_hls.log
 __pycache__/

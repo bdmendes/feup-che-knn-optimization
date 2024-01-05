@@ -8,7 +8,7 @@
 
 char get_class_name(CLASS_ID_TYPE class_id);
 
-void verify_results(int num_new_points, const Point *new_points, const CLASS_ID_TYPE *key);
+int verify_results(int num_new_points, const Point *new_points, const CLASS_ID_TYPE *key);
 
 int get_reference_score(double time_s, int num_points);
 

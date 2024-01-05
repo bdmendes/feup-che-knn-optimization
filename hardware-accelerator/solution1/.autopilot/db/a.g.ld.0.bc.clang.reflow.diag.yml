@@ -1,0 +1,66 @@
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_9_1
+  - String:          '> at '
+  - LoopLoc:         'src/hardware-accelerator/knn_hw_accel.c:9:21'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/hardware-accelerator/knn_hw_accel.c, Line: 13, 
+                   Column: 26 }
+Function:        hw_get_eucledean_distances
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_13_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/hardware-accelerator/knn_hw_accel.c, Line: 21, 
+                   Column: 26 }
+Function:        hw_get_eucledean_distances
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_21_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/hardware-accelerator/knn_hw_accel.c, Line: 5, 
+                   Column: 0 }
+Function:        hw_get_eucledean_distances
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_13_2
+  - String:          ''' ('
+  - LoopLoc:         'src/hardware-accelerator/knn_hw_accel.c:13:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          hw_get_eucledean_distances
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/hardware-accelerator/knn_hw_accel.c, Line: 5, 
+                   Column: 0 }
+Function:        hw_get_eucledean_distances
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_21_3
+  - String:          ''' ('
+  - LoopLoc:         'src/hardware-accelerator/knn_hw_accel.c:21:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          hw_get_eucledean_distances
+  - String:          ''' completely with a factor of '
+  - Factor:          '43'
+...

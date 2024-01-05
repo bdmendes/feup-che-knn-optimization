@@ -1,0 +1,221 @@
+
+
+================================================================
+== Synthesis Summary Report of 'hw_get_eucledean_distances'
+================================================================
++ General Information: 
+    * Date:           Fri Jan  5 16:41:53 2024
+    * Version:        2023.2 (Build 4023990 on Oct 11 2023)
+    * Project:        hardware-accelerator
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg484-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+------------+-------------+---------------+-----+
+    |            Modules           | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |      |            |             |               |     |
+    |            & Loops           | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM |     DSP    |      FF     |      LUT      | URAM|
+    +------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+------------+-------------+---------------+-----+
+    |+ hw_get_eucledean_distances  |     -|  0.00|     4651|  4.651e+04|         -|     4652|     -|        no|     -|  731 (332%)|  83224 (78%)|  124768 (234%)|    -|
+    | o VITIS_LOOP_9_1             |     -|  7.30|     4649|  4.649e+04|       315|        1|  4336|       yes|     -|           -|            -|              -|    -|
+    +------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+------------+-------------+---------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* Other Ports
++-----------------------+---------+-----------+----------+
+| Port                  | Mode    | Direction | Bitwidth |
++-----------------------+---------+-----------+----------+
+| dist_points_distances | ap_vld  | out       | 64       |
+| new_point             | ap_none | in        | 2816     |
+| points_features       | ap_none | in        | 64       |
++-----------------------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-----------------------+-----------+----------+
+| Argument              | Direction | Datatype |
++-----------------------+-----------+----------+
+| new_point             | in        |          |
+| points_features       | in        | double*  |
+| dist_points_distances | out       | double*  |
++-----------------------+-----------+----------+
+
+* SW-to-HW Mapping
++-----------------------+------------------------------+---------+
+| Argument              | HW Interface                 | HW Type |
++-----------------------+------------------------------+---------+
+| new_point             | new_point                    | port    |
+| points_features       | points_features              | port    |
+| dist_points_distances | dist_points_distances        | port    |
+| dist_points_distances | dist_points_distances_ap_vld | port    |
++-----------------------+------------------------------+---------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------+-----+--------+-------------+------+---------+---------+
+| Name                                 | DSP | Pragma | Variable    | Op   | Impl    | Latency |
++--------------------------------------+-----+--------+-------------+------+---------+---------+
+| + hw_get_eucledean_distances         | 731 |        |             |      |         |         |
+|   add_ln9_fu_1374_p2                 |     |        | add_ln9     | add  | fabric  | 0       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U1  | 3   |        | diff        | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U87  | 11  |        | mul8        | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U2  | 3   |        | diff_1      | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U88  | 11  |        | mul8_1      | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U3  | 3   |        | diff_2      | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U89  | 11  |        | mul8_2      | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U5  | 3   |        | diff_3      | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U90  | 11  |        | mul8_3      | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U7  | 3   |        | diff_4      | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U91  | 11  |        | mul8_4      | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U9  | 3   |        | diff_5      | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U92  | 11  |        | mul8_5      | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U11 | 3   |        | diff_6      | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U93  | 11  |        | mul8_6      | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U13 | 3   |        | diff_7      | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U94  | 11  |        | mul8_7      | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U15 | 3   |        | diff_8      | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U95  | 11  |        | mul8_8      | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U17 | 3   |        | diff_9      | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U96  | 11  |        | mul8_9      | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U19 | 3   |        | diff_10     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U97  | 11  |        | mul8_s      | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U21 | 3   |        | diff_11     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U98  | 11  |        | mul8_10     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U23 | 3   |        | diff_12     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U99  | 11  |        | mul8_11     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U25 | 3   |        | diff_13     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U100 | 11  |        | mul8_12     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U27 | 3   |        | diff_14     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U101 | 11  |        | mul8_13     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U29 | 3   |        | diff_15     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U102 | 11  |        | mul8_14     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U31 | 3   |        | diff_16     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U103 | 11  |        | mul8_15     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U33 | 3   |        | diff_17     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U104 | 11  |        | mul8_16     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U35 | 3   |        | diff_18     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U105 | 11  |        | mul8_17     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U37 | 3   |        | diff_19     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U106 | 11  |        | mul8_18     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U39 | 3   |        | diff_20     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U107 | 11  |        | mul8_19     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U41 | 3   |        | diff_21     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U108 | 11  |        | mul8_20     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U43 | 3   |        | diff_22     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U109 | 11  |        | mul8_21     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U45 | 3   |        | diff_23     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U110 | 11  |        | mul8_22     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U47 | 3   |        | diff_24     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U111 | 11  |        | mul8_23     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U49 | 3   |        | diff_25     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U112 | 11  |        | mul8_24     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U51 | 3   |        | diff_26     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U113 | 11  |        | mul8_25     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U53 | 3   |        | diff_27     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U114 | 11  |        | mul8_26     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U55 | 3   |        | diff_28     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U115 | 11  |        | mul8_27     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U57 | 3   |        | diff_29     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U116 | 11  |        | mul8_28     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U59 | 3   |        | diff_30     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U117 | 11  |        | mul8_29     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U61 | 3   |        | diff_31     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U118 | 11  |        | mul8_30     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U63 | 3   |        | diff_32     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U119 | 11  |        | mul8_31     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U65 | 3   |        | diff_33     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U120 | 11  |        | mul8_32     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U67 | 3   |        | diff_34     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U121 | 11  |        | mul8_33     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U69 | 3   |        | diff_35     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U122 | 11  |        | mul8_34     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U71 | 3   |        | diff_36     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U123 | 11  |        | mul8_35     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U73 | 3   |        | diff_37     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U124 | 11  |        | mul8_36     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U75 | 3   |        | diff_38     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U125 | 11  |        | mul8_37     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U77 | 3   |        | diff_39     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U126 | 11  |        | mul8_38     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U79 | 3   |        | diff_40     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U127 | 11  |        | mul8_39     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U81 | 3   |        | diff_41     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U128 | 11  |        | mul8_40     | dmul | maxdsp  | 6       |
+|   dsub_64ns_64ns_64_7_full_dsp_1_U83 | 3   |        | diff_42     | dsub | fulldsp | 6       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U129 | 11  |        | mul8_41     | dmul | maxdsp  | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U4  | 3   |        | distance    | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U6  | 3   |        | distance_1  | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U8  | 3   |        | distance_2  | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U10 | 3   |        | distance_3  | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U12 | 3   |        | distance_4  | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U14 | 3   |        | distance_5  | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U16 | 3   |        | distance_6  | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U18 | 3   |        | distance_7  | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U20 | 3   |        | distance_8  | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U22 | 3   |        | distance_9  | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U24 | 3   |        | distance_10 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U26 | 3   |        | distance_11 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U28 | 3   |        | distance_12 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U30 | 3   |        | distance_13 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U32 | 3   |        | distance_14 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U34 | 3   |        | distance_15 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U36 | 3   |        | distance_16 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U38 | 3   |        | distance_17 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U40 | 3   |        | distance_18 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U42 | 3   |        | distance_19 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U44 | 3   |        | distance_20 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U46 | 3   |        | distance_21 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U48 | 3   |        | distance_22 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U50 | 3   |        | distance_23 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U52 | 3   |        | distance_24 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U54 | 3   |        | distance_25 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U56 | 3   |        | distance_26 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U58 | 3   |        | distance_27 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U60 | 3   |        | distance_28 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U62 | 3   |        | distance_29 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U64 | 3   |        | distance_30 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U66 | 3   |        | distance_31 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U68 | 3   |        | distance_32 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U70 | 3   |        | distance_33 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U72 | 3   |        | distance_34 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U74 | 3   |        | distance_35 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U76 | 3   |        | distance_36 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U78 | 3   |        | distance_37 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U80 | 3   |        | distance_38 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U82 | 3   |        | distance_39 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U84 | 3   |        | distance_40 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U85 | 3   |        | distance_41 | dadd | fulldsp | 6       |
+|   dadd_64ns_64ns_64_7_full_dsp_1_U86 | 3   |        | distance_42 | dadd | fulldsp | 6       |
++--------------------------------------+-----+--------+-------------+------+---------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+  No pragmas found
+

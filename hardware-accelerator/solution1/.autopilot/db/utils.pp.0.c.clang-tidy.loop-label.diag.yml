@@ -1,0 +1,112 @@
+---
+MainSourceFile:  /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_30_1:  '
+    FileOffset:      30
+    FilePath:        /home/sirze/repos/CHE/src/utils.c
+    Replacements:    
+      - FilePath:        /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c
+        Offset:          88877
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_30_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_116_1:  '
+    FileOffset:      116
+    FilePath:        /home/sirze/repos/CHE/src/utils.c
+    Replacements:    
+      - FilePath:        /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c
+        Offset:          90225
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_116_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_118_2:  '
+    FileOffset:      118
+    FilePath:        /home/sirze/repos/CHE/src/utils.c
+    Replacements:    
+      - FilePath:        /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c
+        Offset:          90276
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_118_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_132_1:  '
+    FileOffset:      132
+    FilePath:        /home/sirze/repos/CHE/src/utils.c
+    Replacements:    
+      - FilePath:        /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c
+        Offset:          90594
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_132_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_134_2:  '
+    FileOffset:      134
+    FilePath:        /home/sirze/repos/CHE/src/utils.c
+    Replacements:    
+      - FilePath:        /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c
+        Offset:          90649
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_134_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_148_1:  '
+    FileOffset:      148
+    FilePath:        /home/sirze/repos/CHE/src/utils.c
+    Replacements:    
+      - FilePath:        /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c
+        Offset:          90900
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_148_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_165_1:  '
+    FileOffset:      165
+    FilePath:        /home/sirze/repos/CHE/src/utils.c
+    Replacements:    
+      - FilePath:        /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c
+        Offset:          91241
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_165_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_172_2:  '
+    FileOffset:      172
+    FilePath:        /home/sirze/repos/CHE/src/utils.c
+    Replacements:    
+      - FilePath:        /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c
+        Offset:          91383
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_172_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_174_3:  '
+    FileOffset:      174
+    FilePath:        /home/sirze/repos/CHE/src/utils.c
+    Replacements:    
+      - FilePath:        /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c
+        Offset:          91434
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_174_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_205_1:  '
+    FileOffset:      205
+    FilePath:        /home/sirze/repos/CHE/src/utils.c
+    Replacements:    
+      - FilePath:        /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c
+        Offset:          91845
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_205_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_207_2:  '
+    FileOffset:      207
+    FilePath:        /home/sirze/repos/CHE/src/utils.c
+    Replacements:    
+      - FilePath:        /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c
+        Offset:          91896
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_207_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_234_1:  '
+    FileOffset:      234
+    FilePath:        /home/sirze/repos/CHE/src/utils.c
+    Replacements:    
+      - FilePath:        /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/utils.pp.0.c
+        Offset:          92387
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_234_1: '
+...

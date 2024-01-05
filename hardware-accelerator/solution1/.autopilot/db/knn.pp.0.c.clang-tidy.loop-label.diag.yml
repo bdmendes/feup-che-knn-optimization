@@ -1,0 +1,94 @@
+---
+MainSourceFile:  /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/knn.pp.0.c
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_52_1:  '
+    FileOffset:      52
+    FilePath:        /home/sirze/repos/CHE/src/knn.c
+    Replacements:    
+      - FilePath:        /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/knn.pp.0.c
+        Offset:          97982
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_52_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_55_2:  '
+    FileOffset:      55
+    FilePath:        /home/sirze/repos/CHE/src/knn.c
+    Replacements:    
+      - FilePath:        /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/knn.pp.0.c
+        Offset:          98088
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_55_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_80_1:  '
+    FileOffset:      80
+    FilePath:        /home/sirze/repos/CHE/src/knn.c
+    Replacements:    
+      - FilePath:        /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/knn.pp.0.c
+        Offset:          98559
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_80_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_101_1:  '
+    FileOffset:      101
+    FilePath:        /home/sirze/repos/CHE/src/knn.c
+    Replacements:    
+      - FilePath:        /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/knn.pp.0.c
+        Offset:          98847
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_101_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_104_2:  '
+    FileOffset:      104
+    FilePath:        /home/sirze/repos/CHE/src/knn.c
+    Replacements:    
+      - FilePath:        /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/knn.pp.0.c
+        Offset:          98953
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_104_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_152_1:  '
+    FileOffset:      152
+    FilePath:        /home/sirze/repos/CHE/src/knn.c
+    Replacements:    
+      - FilePath:        /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/knn.pp.0.c
+        Offset:          99503
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_152_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_163_2:  '
+    FileOffset:      163
+    FilePath:        /home/sirze/repos/CHE/src/knn.c
+    Replacements:    
+      - FilePath:        /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/knn.pp.0.c
+        Offset:          99601
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_163_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_230_1:  '
+    FileOffset:      230
+    FilePath:        /home/sirze/repos/CHE/src/knn.c
+    Replacements:    
+      - FilePath:        /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/knn.pp.0.c
+        Offset:          100155
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_230_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_239_2:  '
+    FileOffset:      239
+    FilePath:        /home/sirze/repos/CHE/src/knn.c
+    Replacements:    
+      - FilePath:        /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/knn.pp.0.c
+        Offset:          100227
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_239_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_253_3:  '
+    FileOffset:      253
+    FilePath:        /home/sirze/repos/CHE/src/knn.c
+    Replacements:    
+      - FilePath:        /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/knn.pp.0.c
+        Offset:          100415
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_253_3: '
+...

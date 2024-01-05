@@ -1,0 +1,31 @@
+---
+MainSourceFile:  /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/knn_hw_accel.pp.0.c
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_9_1:  '
+    FileOffset:      9
+    FilePath:        /home/sirze/repos/CHE/src/hardware-accelerator/knn_hw_accel.c
+    Replacements:    
+      - FilePath:        /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/knn_hw_accel.pp.0.c
+        Offset:          7822
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_9_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_13_2:  '
+    FileOffset:      13
+    FilePath:        /home/sirze/repos/CHE/src/hardware-accelerator/knn_hw_accel.c
+    Replacements:    
+      - FilePath:        /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/knn_hw_accel.pp.0.c
+        Offset:          7927
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_13_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_21_3:  '
+    FileOffset:      21
+    FilePath:        /home/sirze/repos/CHE/src/hardware-accelerator/knn_hw_accel.c
+    Replacements:    
+      - FilePath:        /home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/knn_hw_accel.pp.0.c
+        Offset:          8151
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_21_3: '
+...

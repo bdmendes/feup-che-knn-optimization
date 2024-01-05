@@ -1,0 +1,21 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/sirze/repos/CHE/hardware-accelerator/solution1/csynth.tcl:33:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="hw_get_eucledean_distances" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=hw_get_eucledean_distances" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/sirze/repos/CHE/hardware-accelerator/solution1/directives.tcl:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="hw_get_eucledean_distances" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=hw_get_eucledean_distances" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/hardware-accelerator/knn_hw_accel.c:13:26" msg_body="Loop 'VITIS_LOOP_13_2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_13_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/hardware-accelerator/knn_hw_accel.c:21:26" msg_body="Loop 'VITIS_LOOP_21_3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_21_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/hardware-accelerator/knn_hw_accel.c:5:0" msg_body="Unrolling loop 'VITIS_LOOP_13_2' (src/hardware-accelerator/knn_hw_accel.c:13:26) in function 'hw_get_eucledean_distances' completely with a factor of 43">
+        <args Factor="43" LoopLoc="src/hardware-accelerator/knn_hw_accel.c:13:26" LoopName="VITIS_LOOP_13_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/hardware-accelerator/knn_hw_accel.c:5:0" msg_body="Unrolling loop 'VITIS_LOOP_21_3' (src/hardware-accelerator/knn_hw_accel.c:21:26) in function 'hw_get_eucledean_distances' completely with a factor of 43">
+        <args Factor="43" LoopLoc="src/hardware-accelerator/knn_hw_accel.c:21:26" LoopName="VITIS_LOOP_21_3"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

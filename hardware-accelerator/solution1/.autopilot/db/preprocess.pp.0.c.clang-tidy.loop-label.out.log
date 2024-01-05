@@ -1,0 +1,15 @@
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/preprocess.pp.0.c:920:5: warning: Added loop label VITIS_LOOP_8_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < 43; i++)
+    ^~~
+    VITIS_LOOP_8_1: 
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/preprocess.pp.0.c:920:5: note: FIX-IT applied suggested code changes
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/preprocess.pp.0.c:922:9: warning: Added loop label VITIS_LOOP_10_2:   [xilinx-label-all-loops]
+        for (int j = 0; j < 4336; j++)
+        ^~~
+        VITIS_LOOP_10_2: 
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/preprocess.pp.0.c:922:9: note: FIX-IT applied suggested code changes
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/preprocess.pp.0.c:940:5: warning: Added loop label VITIS_LOOP_28_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < 4336; i++)
+    ^~~
+    VITIS_LOOP_28_1: 
+/home/sirze/repos/CHE/hardware-accelerator/solution1/.autopilot/db/preprocess.pp.0.c:940:5: note: FIX-IT applied suggested code changes

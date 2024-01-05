@@ -17,12 +17,12 @@ char get_class_name(CLASS_ID_TYPE class_id)
 /*
  * Verify if the classifications equal the original ones stored in key
  */
-void verify_results(int num_new_points, const Point *new_points, const CLASS_ID_TYPE *key)
+int verify_results(int num_new_points, const Point *new_points, const CLASS_ID_TYPE *key)
 {
     if (key == NULL)
     {
         printf("Skipping verification.\n");
-        return;
+        return -1;
     }
 
     int passed = 1;
@@ -49,10 +49,12 @@ void verify_results(int num_new_points, const Point *new_points, const CLASS_ID_
     if (passed == 1)
     {
         printf("Passed!\n");
+        return 0;
     }
     else
     {
         printf("Failed!\n");
+        return 1;
     }
 }
 
