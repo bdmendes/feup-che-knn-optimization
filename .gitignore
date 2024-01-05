@@ -1,8 +1,11 @@
 **.out
 **.o
+**.timing
+**.power
 src/*.dat
 src/params.h
 analysis*.txt
 vscode/
 *analysis.txt
 .vscode/
+__pycache__/
